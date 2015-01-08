@@ -1,0 +1,26 @@
+#include <TH1F.h>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void hist(){
+  string str = "";
+  double hcontent = 0;
+int i = 0;
+  ifstream in("../Compton_pcvecchio/Massa-Montella/forse-40°gate.dat");
+  TH1F *h = new TH1F("hist","Istogramma;Canale;Conteggi",8192,0,8192);
+  do {
+    cout << "Dentro il do: " << i << endl;
+    i+=1;
+    getline(in,str);
+    cout << str << endl;
+    stringstream(str) >> hcontent;
+    h->SetBinContent(i,hcontent);
+  }
+  while (!in.eof());
+    h->DrawClone("SAME");
+  in.close();
+}
