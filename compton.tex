@@ -39,53 +39,150 @@ Marco \textsc{Montella}
 
 \begin{abstract}
 \justify
- fsf
+ 
 
 \end{abstract}
 \bigskip
 
 \section{Introduzione}
 
-fsfs
 
-\section{Apparato sperimentale}
+
+\section{Apparato sperimentale} \label{sec:apparato}
 \subsection{Goniometro}
 Essendo lo scintillatore inorganico vincolato a muoversi su un arco di circonferenza, risulta di fondamentale importanza la misura della posizione angolare di quest'ultimo rispetto a uno zero che non deve necessariamente coincidere con il centro geometrico del fascio. \\
-A questo scopo si è posizionato lo scintillatore plastico a circa $3 cm$ dall'estremità del collimatore e nel punto medio della congiungente degli estremi della guida dell'inorganico. Abbiamo quindi posizionato un goniometro prestando attenzione al fatto che il centro si trovasse sulla verticale del punto di incontro tra l'asse del collimatore e il centro del plastico.
+A questo scopo si è posizionato lo scintillatore plastico a circa $2 cm$ dall'estremità del collimatore e nel punto medio della congiungente degli estremi della guida dell'inorganico. Abbiamo quindi posizionato un goniometro prestando attenzione al fatto che il centro si trovasse sulla verticale del punto di incontro tra l'asse del collimatore e il centro del plastico. \'E legittimo supporre infatti che la maggior parte delle interazioni avvengano in un intorno di questo punto, le cui dimensioni sono determinate dalla larghezza del fascio. \\
 
 \section{Operazioni preliminari}
-fdfd
+
 \subsection{Stima della dose}
-s
+
 \subsection{Determinazione del punto di lavoro degli scintillatori}
-d
-\subsection{Caratteristiche geometriche del fascio}
-\'E necessario studiare l'estensione angolare del fascio per stimare correttamente l'errore sulla lettura della posizione angolare (sez. \ref{subsec:err_angolo}) e per poter correttamente interpretare i risultati successivi. Per fare ciò si è rimosso lo scintillatore plastico dal sistema e si è studiato l'andamento dei conteggi dello scintillatore inorganico in funzione della sua posizione angolare. Il risultato è mostrato in fig.!!!REF!!!.
+Prendendo in considerazione lo scintillatore plastico, si è in primo luogo tracciata la curva dei conteggi in funzione della tensione di alimentazione. \\
+Osservando l'assenza di una qualsivoglia struttura di plateau, si è effettuata un'analisi separata del rumore riposizionando lo scintillatore plastico in una zona del tutto schermata dal fascio principale. \\ 
+Alla tensione di alimentazione di $ 1700V$ e con $ 50 mV$ di tensione di soglia (valore minimo consentito) si è osservato¸in un tempo di misura di 10s il seguente rapporto tra conteggi:
+\begin{equation}
+\frac{N-noise}{N-fascio}=\frac{216}{64316}=0.0033
+\end{equation}
+dell'ordine dell'incertezza statistica sui conteggi in presenza di sorgente. \\
+Essendo dunque nel range di tensione di alimentazione suggerito trascurabile la frazione di eventi di rumore, ci si attende che la curva di alimentazione si mantenga crescente saturando eventualmente a tensioni sopra le quali tutti i segnali prodotti nello scintillatore vengono amplificate dal PMT in un segnale sopra la soglia di discriminazione. \\
+Un discorso analogo è valido anche per lo scintillatore inorganico, per il quale la saturazione dei conteggi è particolarmente visibile. L'operazione è stata effettuata allineando lo scintillatore con il collimatore del fascio.[INSERIRE IMMAGINE]\\
+Al fine di assicurarsi della legittimità degli eventi conteggiati in tale fase è stata effettuata una stima degli eventi attesi sullo scintillatore inorganico nota l'attività della sorgente.
+Il calcolo assume un'efficienza di rivelazione dell'apparato coinvolto dell'ordine dell'unità, e si riduce alla stima del numero di fotoni emessi dalla sorgente (assunta isotropa l'emissività di quest'ultima) nella porzione dell'angolo solido individuata dal canale di collimazione, del quale sono noti lunghezza e larghezza. Si ottiene: \\
+\begin{equation}
+(\frac{dN}{dt})_{est.}\simeq 2.5\cdot 10^{4} evts./s \ \ \ \ (\frac{dN}{dt})_{mis.}=2.75\cdot 10^{4} evts./s
+\end{equation}
+
+
+\subsection{Caratteristiche geometriche del fascio} \label{subsec:geom_fascio}
+\'E necessario studiare l'estensione angolare del fascio per stimare correttamente l'errore sulla lettura dell'angolo (sez. \ref{subsec:err_angolo}) e per poter correttamente interpretare i risultati successivi. Per fare ciò si è rimosso lo scintillatore plastico dal sistema e si è studiato l'andamento dei conteggi dello scintillatore inorganico in funzione della sua posizione angolare. Il risultato è mostrato in fig.!!!REF!!!.
 
 %\includegraphics[width\textwidth]{•}
 
+La curva risulta essere ben descritta da una gaussiana, con parametri:
+\begin{equation}
+\mu = ...°
+\nonumber
+\end{equation}
+\begin{equation}
+\sigma = ...°
+\nonumber
+\end{equation}
+
+
+L'asimmetria rispetto a $\theta = 0°$ determina la necessità di traslare le future misure angolari di una quantità $\mu$.
 
 
 \subsection{Stima dell'incertezza sull'angolo} \label{subsec:err_angolo}
- \'E legittimo supporre infatti che la maggior parte delle interazioni avvengano in un intorno di questo punto, le cui dimensioni sono determinate dalla larghezza del fascio. \\
+La misura della posizione angolare dello scintillatore inorganico è soggetta ad un'incertezza legata sia alla lettura, ovvero alla capacità dell'occhio di individuare il centro dello scintillatore, sia alla distanza tra la proiezione del punto di interazione sul piano del goniometro e il centro del goniometro stesso.
+\subsubsection{Incertezza sulla lettura e parallasse}
 
-%La misura della posizione angolare dello scintillatore inorganico avrà quindi un'incertezza legata sia alla lettura, ovvero alla capacità dell'occhio di individuare il centro dello scintillatore e alla parallasse, sia alla distanza tra la proiezione del punto di interazione sul piano del goniometro e il centro del goniometro stesso.
+\subsubsection{Incertezza sul punto di interazione}
+Questo tipo di incertezza, come si vedrà in sez.!!!! non si riflette in un effettivo errore sull'angolo, in quanto influisce solamente sulla forma dello spettro in energia osservato e viene dunque incluso nell'errore delle misure di energia.  \\
+\vspace{0.8 cm}
+Calcoli teorici\cite{compton_total} forniscono il valore della sezione d'urto Compton totale:
+
+\begin{equation}
+\sigma = 3.7 \cdot 10^{-25} cm^2
+\nonumber
+\end{equation}
+
+Considerando l'energia media della sorgente utilizzata (Cobalto, $E/m_e = 2.45$) gli urti possono essere considerati avvenenti tra fotoni ed elettroni liberi. Considerata anche la densità di un polimero tipico (circa $1 g/cm^3$) e il fatto che l'elemento preponderante in questi materiali è il carbonio (in cui metà della massa è dovuta a protoni) è possibile stimare la densità numerica di elettroni, da cui il libero cammino medio di un fotone: \\
+ 
+\begin{equation}
+\lambda = \frac{1}{n_{elettroni} \cdot \sigma} = \frac{m_{protone}}{\frac{1}{2} \cdot \rho \cdot \sigma} \approx 10 \ cm
+\nonumber
+\end{equation}
+
+Essendo questa misura un fattore quasi 10 maggiore dello spessore dello scintillatore plastico, è ragionevole supporre che la probabilità di interazione sia costante lungo lo spessore dello scintillatore. La non conoscenza del punto di interazione porta ad un errore sulla lettura dell'angolo, come è schematizzato in fig.!!!REF!!!. 
+
+%\includegraphics[width=\textwidth]{""} \label{fig:err_angolo}
+
+Si può calcolare:
+\begin{equation}
+\Delta \alpha_v = \frac{\Delta h_v}{L} sin\alpha
+\nonumber
+\end{equation}
+
+Il punto di interazione non è determinato anche a causa dell'estensione del fascio stesso (sez. \ref{subsec:geom_fascio}). Questo si traduce in un'incertezza sull'angolo che può essere espressa matematicamente in modo analogo alla precedente:
+
+\begin{equation}
+\Delta \alpha_o = \frac{\Delta h_o}{L} cos\alpha
+\nonumber
+\end{equation}
+
+Tuttavia una rapida stima permette di dimostrare che quest'ultimo produce un effetto trascurabile rispetto al precedente. Come è stato misurato in sez. \ref{subsec:geom_fascio}, il fascio ha una distribuzione ben descritta da una gaussiana con $\sigma = 3.97 °$. Sapendo la distanza tra lo scintillatore inorganico e quello plastico (sez. \ref{sec:apparato}) si trova, con metodi geometrici, che il segmento intercettato dal fascio sullo scintillatore plastico misura \\
+\begin{equation}
+\Delta h_o \approx 0.5 mm
+\end{equation}
+
+da cui si può ricavare \\
+
+da confrontare con il $\Delta \alpha_v$ ottenuto utilizzando $\Delta h_v = 0.72 \ cm$, corrispondente alla deviazione standard di una distribuzione uniforme di ampiezza uguale allo spessore dello scintillatore plastico. Essendo l'errore approssimativamente lineare in $\Delta h$ risulta che: \\
+\begin{equation}
+\frac{\Delta \alpha_o}{\Delta \alpha_v} = \frac{\Delta h_o}{\Delta h_v} = 0.07 
+\end{equation}
+
+e dunque trascurabile.
+
+Un'altra fonte di errore è quella dovuta all'estensione del rivelatore stesso, che occupa una porzione angolare calcolabile, una volta nota la configurazione geometrica, di \\
+\begin{equation}
+\Delta \alpha = \frac{5.08}{30} rad = 9.7°
+\nonumber
+\end{equation}
+
+
+
 
 
 \subsection{Calibrazione dello scintillatore inorganico}
-\
+
 
 \section{Metodo di misura}
-\justify
+
 \subsection{Segnale di gate}
+Al fine di ridurre il rapporto segnale/rumore nelle misure di spettro [solo in queste???] si sfrutta la modalità di acquisizione con gate dell'analizzatore multicanale. Tale segnale si costruisce a partire dalla coincidenza tra gli output dei due scintillatori. In tale modo si ordina l'acquisizione del segnale in output dell'inorganico solamente se viene rivelato in coincidenza temporale ad esso un evento nello scintillatore plastico, idealmente dovuto all'elettrone rinculante.
+\\
+Il segnale in ingresso al gate deve essere conforme per durata al segnale di input all'analizzatore, a sua volta in uscita dal sistema di amplificazione-shaping. Per generare un segnale di questo tipo si è proceduto in questo modo:
+
+\begin{itemize}
+	\item Invio dell'output del NaI al modulo di discriminazione. A causa dell'elevata ampiezza e durata dei segnali in uscita dal NaI, il discriminatore ha per output non uno, ma un treno di segnali digitali della durata selezionata sino a quando il segnale analogico non passa sotto soglia.
+	\item Il treno di segnali viene mandato come input ad un modulo dual timer che restituisce un unico segnale digitale di durata impostata compatibile con la durata del segnale analogico.
+	\item Il segnale così generato viene inviato come input ad una seconda unità di dual timing al fine di ottenere a partire da esso un segnale digitale dalla durata dell'ordine delle decine di nanosecondi in coincidenza con la fase di salita del segnale dell'inorganico.
+	\item Il segnale viene inviato al modulo di coincidenza con l'output digitalizzato del plastico.
+	\item L'output della coincidenza è inviato in input ad una terza unità dual timer al fine di ottenere un segnale della stessa durata del segnale dello scintillatore inorganico amplificato e formato.
+\end{itemize}
+
+L'efficacia del metodo di acquisizione con gate dipende però fortemente dalla rivelabilità dell'elettrone rinculante, e sarà pertanto massimamente efficacie ad angoli di diffusione alti, per i quali l'energia cinetica trasferita è massima. \\
+A piccoli angoli di diffusione, per contro, l'efficienza del gate risulta ampiamente ridotta, al punto da rendere la procedura completamente inefficacie. [MAGARI IMMAGINE GATE NO GATE STESSO ANGOLO]. Ci si è pertanto limitati ad sfruttare il segnale di gate per angoli di diffusione $|\alpha|>30°$. 
 
 \subsection{A}
 
 \section{Risultati sperimentali}
-\justify
+
 
 \section{Conclusioni}
-\justify
+
 
 
 \input{bibcompton.bib}

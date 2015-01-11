@@ -1,0 +1,53 @@
+
+# DO NOT DELETE
+
+./err_angolo_cpp.so: /home/federico/root/include/TRandom3.h
+./err_angolo_cpp.so: /home/federico/root/include/TRandom.h
+./err_angolo_cpp.so: /home/federico/root/include/TNamed.h
+./err_angolo_cpp.so: /home/federico/root/include/TObject.h
+./err_angolo_cpp.so: /home/federico/root/include/Rtypes.h
+./err_angolo_cpp.so: /home/federico/root/include/RConfig.h
+./err_angolo_cpp.so: /home/federico/root/include/RVersion.h
+./err_angolo_cpp.so: /home/federico/root/include/DllImport.h
+./err_angolo_cpp.so: /home/federico/root/include/Rtypeinfo.h
+./err_angolo_cpp.so: /home/federico/root/include/snprintf.h
+./err_angolo_cpp.so: /home/federico/root/include/strlcpy.h
+./err_angolo_cpp.so: /home/federico/root/include/TGenericClassInfo.h
+./err_angolo_cpp.so: /home/federico/root/include/TSchemaHelper.h
+./err_angolo_cpp.so: /home/federico/root/include/TStorage.h
+./err_angolo_cpp.so: /home/federico/root/include/TVersionCheck.h
+./err_angolo_cpp.so: /home/federico/root/include/Riosfwd.h
+./err_angolo_cpp.so: /home/federico/root/include/TBuffer.h
+./err_angolo_cpp.so: /home/federico/root/include/TString.h
+./err_angolo_cpp.so: /home/federico/root/include/TMathBase.h
+./err_angolo_cpp.so: /home/federico/root/include/TH1F.h
+./err_angolo_cpp.so: /home/federico/root/include/TH1.h
+./err_angolo_cpp.so: /home/federico/root/include/TAxis.h
+./err_angolo_cpp.so: /home/federico/root/include/TAttAxis.h
+./err_angolo_cpp.so: /home/federico/root/include/TArrayD.h
+./err_angolo_cpp.so: /home/federico/root/include/TArray.h
+./err_angolo_cpp.so: /home/federico/root/include/TAttLine.h
+./err_angolo_cpp.so: /home/federico/root/include/TAttFill.h
+./err_angolo_cpp.so: /home/federico/root/include/TAttMarker.h
+./err_angolo_cpp.so: /home/federico/root/include/TArrayC.h
+./err_angolo_cpp.so: /home/federico/root/include/TArrayS.h
+./err_angolo_cpp.so: /home/federico/root/include/TArrayI.h
+./err_angolo_cpp.so: /home/federico/root/include/TArrayF.h
+./err_angolo_cpp.so: /home/federico/root/include/Foption.h
+./err_angolo_cpp.so: /home/federico/root/include/TVectorFfwd.h
+./err_angolo_cpp.so: /home/federico/root/include/TVectorDfwd.h
+./err_angolo_cpp.so: /home/federico/root/include/TFitResultPtr.h
+./err_angolo_cpp.so: /home/federico/root/include/TFile.h
+./err_angolo_cpp.so: /home/federico/root/include/TDirectoryFile.h
+./err_angolo_cpp.so: /home/federico/root/include/TDirectory.h
+./err_angolo_cpp.so: /home/federico/root/include/TList.h
+./err_angolo_cpp.so: /home/federico/root/include/TSeqCollection.h
+./err_angolo_cpp.so: /home/federico/root/include/TCollection.h
+./err_angolo_cpp.so: /home/federico/root/include/TIterator.h
+./err_angolo_cpp.so: /home/federico/root/include/TDatime.h
+./err_angolo_cpp.so: /home/federico/root/include/TUUID.h
+./err_angolo_cpp.so: /home/federico/root/include/TMap.h
+./err_angolo_cpp.so: /home/federico/root/include/THashTable.h
+./err_angolo_cpp.so: /home/federico/root/include/TUrl.h
+./err_angolo_cpp.so: /home/federico/root/include/cintdictversion.h /home/federico/root/include/RVersion.h
+err_angolo_cpp__ROOTBUILDVERSION= 5.34/08
