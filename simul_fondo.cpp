@@ -1,0 +1,27 @@
+#include <TF1.h>
+#include <cmath>
+#include <TGraphErrors.h>
+#include <iostream>
+using namespace std;
+
+void fondo() {
+  double max;
+  double displ[89];
+  double angolo[89];
+  // TF1* gauss = new TF1("gauss","gaus(0)",-200,200);
+  // gauss->SetParameters(4200,0,60);
+  //TF1* line = new TF1("line","[0]*x",-200,200);
+  // TF1* sum = new TF1("sum","[3]*x+[0]*TMath::Exp(-(x-[1])*(x-[1])/(2*[2]*[2]))",-200,200);
+ TF1* sum = new TF1("sum","[3]*TMath::ATan([4]*x)+[0]*TMath::Exp(-(x-[1])*(x-[1])/(2*[2]*[2]))",-200,200);
+  for(int theta = 1; theta <= 89; theta++) {
+    //  sum->SetParameters(800,0,52,-tan(double(theta)*4*atan(1)/180));
+    sum->SetParameters(800,0,52,1599/(4*atan(1)),1/theta);
+    sum->SetNpx(10000);
+    max = sum->GetMaximumX(-100,100);
+    cout << max << endl;
+    displ[theta] = -max;
+    angolo[theta] = double(theta);
+  }
+  TGraphErrors* dis = new TGraphErrors(89,angolo,displ,NULL,NULL);
+  dis->DrawClone("APE");
+}

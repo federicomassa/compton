@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+#include <TF1.h>
+#include <TGraphErrors.h>
+#include <TCanvas.h>
+#include <TFitResult.h>
+#include <TAxis.h>
+
+
+void electron() {
+     const int npoints = 15;
+     double angolo_f[npoints] = {-60,-55,-50,-40,-30,-25,-20,25,30,35,40,45,50,55,60};
+     double angolo[npoints];
+     
+     TCanvas *c1 = new TCanvas(); 
+     c1->SetGrid();
+     
+     double E = (1.17+1.33)/2.;
+     
+     for (int i = 0; i < npoints; i++) {
+       //         angolo[i] = angolo_f[i]-1.38;}
+       angolo[i] = angolo_f[i]-1.38;}
+         
+     double energia[npoints] = {500,569,607,705,838,946,980,963,911,829,765,685,617,540,515};
+     double thenergia[npoints];
+     
+     for (int i = 0; i < npoints; i++) {
+         thenergia[i] = energia[i]+60;}
+     
+     double errenergia[npoints], errangolo[npoints];
+for (int i = 0; i < npoints; i++) {
+  //  errenergia[i] = 13;
+  //  errangolo[i] = 1.5   ;
+  errenergia[i] = 12.5;
+  errangolo[i] = 1;
+}   
+    //1252.85
+    // TF1* fitfunc = new TF1("Fitting Function", "[2]+1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
+ TF1* fitfunc = new TF1("Fitting Function", "-62+ 1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
+ //     fitfunc->SetParameters(500,2,-60);
+ fitfunc->SetParameters(500,2);
+     fitfunc->SetParName(0,"Mass");
+     fitfunc->SetParName(1,"Center");
+     TGraphErrors *graph = new TGraphErrors(npoints,angolo_f,energia,errangolo,errenergia);
+     graph->SetTitle("Massa elettrone");
+     graph->GetXaxis()->SetTitle("Angolo(°)");
+     graph->GetYaxis()->SetTitle("Energia(keV)");
+     graph->GetYaxis()->SetTitleOffset(1.4);
+     graph->DrawClone("APE");
+     
+     TFitResultPtr frp = graph->Fit(fitfunc,"0RS");
+     frp->Print();
+     fitfunc->SetLineColor(kGreen);
+     fitfunc->DrawClone("SAME");
+     
+    // TPaveText* pt = new TPaveText(.05,.1,.95.,.8);
+//     pt->AddText("Chi quadro ridotto: ");
+//     pt->AddText("fitfunc->GetChisquare()/fitfunc->GetNDF()");
+//     pt->DrawClone("same");
+
+     TF1* th = new TF1("Theoretical", "1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
+     th->SetParameters(510.9989,1.38);
+     th->SetLineColor(2);
+     th->DrawClone("same");
+               
+     }
+

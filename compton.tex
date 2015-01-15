@@ -95,8 +95,9 @@ L'asimmetria rispetto a $\theta = 0°$ determina la necessità di traslare le fu
 
 \subsection{Stima dell'incertezza sull'angolo} \label{subsec:err_angolo}
 La misura della posizione angolare dello scintillatore inorganico è soggetta ad un'incertezza legata sia alla lettura, ovvero alla capacità dell'occhio di individuare il centro dello scintillatore, sia alla distanza tra la proiezione del punto di interazione sul piano del goniometro e il centro del goniometro stesso.
-\subsubsection{Incertezza sulla lettura e parallasse}
+\subsubsection{Incertezza sulla lettura}
 
+Una prima fonte di errore sulla lettura dell'angolo sono rappresentate dalla limitata capacità da parte dell'occhio umano di valutare l'allineamento tra lo scintillatore e l'indicatore dell'angolo sul goniometro. Si è stimata l'incertezza così introdotta in $0.1°$ effettuando più volte operazioni fittizie di allineamento e verificando di volta in volta l'errore angolare commesso.
 
 \subsubsection{Incertezza sul punto di interazione}
 Questo tipo di incertezza, come si vedrà in sez.!!!! non si riflette in un effettivo errore sull'angolo, in quanto influisce solamente sulla forma dello spettro in energia osservato e viene dunque incluso nell'errore delle misure di energia.  \\
@@ -158,9 +159,44 @@ Un'altra fonte di errore è quella dovuta all'estensione del rivelatore stesso, 
 
 \subsection{Calibrazione dello scintillatore inorganico}
 
+Essendo lo scintillatore inorganico in grado di produrre un segnale di output proporzionale all'energia in esso depositata dai prodotti, è necessaria un'operazione di calibrazione per determinare la legge che associ a ciascun canale dell'analizzatore la corrispondente energia rilasciata nello scintillatore. 
+Per fare ciò si è fatto uso di quattro sorgenti di piccola intensità per le quali sono ben note a priori le energie dei fotoni emessi nel decadimento:
+
+[TABELLA CON SORGENTI E PICCHI]
+
+Onde minimizzare la contaminazione da parte dei fotoni emessi dalla sorgente principale, la procedura è stata effettuata ponendo lo scintillatore inorganico ad un angolo di circa $90°$ dalla direttrice del fascio, ponendo inoltre degli appositi schermi in piombo tra la sorgente primaria e il rivelatore. Vista la scarsa intensità delle sorgenti di calibrazione, queste ultime sono state poste direttamente a contatto con il rivestimento in alluminio in modo tale da massimizzare la frazione di angolo solido coperto dal rivelatore.\\
+(ERRORI SULLA POSIZIONE)\\
+Gli spettri così ottenuti grazie all'analizzatore multicanale sono visualizzati e salvati sotto forma di istogramma, rendendo così possibile l'estrazione della posizione in canali dei picchi mediante un fit gaussiano degli stessi. La legittimità del fit gaussiano deriva dalla monocromaticità delle sorgenti. In seguito tuttavia agli errori sperimentali collegati al processo di rivelazione e al rumore introdotto nella catena di lettura, la distribuzione ideale a delta di Dirac si manifesta come una Gaussiana con una determinata FWHM.\\
+
+Dati i punti disponibili, non è stato osservato un andamento lineare per la curva di calibrazione. Si è pertanto proceduto con un fit polinomiale di grado superiore.\\
+Al fine di determinare il grado del migliore fit , si è verificato il più piccolo grado per cui il coefficiente del polinomio risultato del fit è compatibile con zero. Quando ciò accade il coefficiente in questione sarà distribuito come una \cite{delprete_normalreg} Normale a media 0 e varianza ignota $\sigma$ :
+\begin{equation}
+a_{r}\ \sim \  N(0,\sigma) \ \ \ \rightarrow \ \ \  \dfrac{a^2_{r}}{\sigma^2}\ \sim\ \chi^2_{1} 
+\nonumber
+\end{equation}
+Dove $r$ rappresenta il numero di parametri stimati attraverso il fit polinomiale. Il grado del polinomio utilizzato è pertanto $r-1$. Si procede testando di volta in volta per vari valori di $r$ l'ipotesi nulla di compatibilità con zero del coefficiente del grado massimo. Non essendo nota la varianza sui parametri, ma solo la sua stima prodotta dal fit, il test è da eseguirsi sulla distribuzione Fisher-Snedecor \cite{delprete_normalreg}:
+\begin{equation}
+f\ = \ \frac{a_r^2}{s^2}\ = \ \frac{\chi^2_{r-1}-\chi^2_r}{\chi^2_r}\ \sim \ F_{1;n-r-1}
+\nonumber
+\end{equation}
+Nella quale $n$ rappresenta il numero di punti sperimentali su cui il fit è effettuato. Tale metodo non permette tuttavia di testare il coefficiente del quinto grado, per il quale il numero di gradi di libertà della distribuzione Fisher-Snedecor si riduce a zero. Ci si è pertanto limitati a effettuare i test d'ipotesi per $R<6$. In tabella sono riportati i valori delle variabili statistiche calcolate al fine di ottenere il P-Value corrispondente a ciascuna ipotesi nulla.\\
+
+L'incertezza sull'energia è ricavata simulando un determinato numero di esperimenti secondo lo schema:
+\begin{enumerate}
+\item Generazione per ogni pseudoesperimento della posizione in canali dei picchi di emissione delle sorgenti di calibrazione secondo una distribuzione gaussiana con valor medio e varianza uguali ai rispettivi valori misurati sperimentalmente.
+\item Fit dei punti così generati utilizzando sempre un polinomio di terzo grado.
+\item Canale per canale si è costruito un istogramma dei valori dell'energia ad esso corrispondente ottenuta in ciascuno degli pseudoesperimenti.
+\item Estrazione, canale per canale, della media e della varianza della distribuzione così tracciata.
+\end{enumerate}
+
+La banda di incertezza sulla curva di calibrazione e le incertezze assolute e relative in funzione dell'energia sono mostrate in [FIGURA]
 
 \section{Metodo di misura}
-
+\subsection{Determinazione di $m_e$ dal fit della relazione Energia-Angolo}
+La procedura sperimentale consiste semplicemente nell'acquisizione delle misure di spettro da parte dello scintillatore inorganico a diversi angoli di scattering, sfruttando la guida su cui quest'ultimo è montato. La relazione su cui verrà effettuato il fit è:
+\begin{equation}
+E'\ = \ \frac{E}{1+\frac{E}{m_e}\left(1-\cos{\theta}\right)}
+\end{equation}
 \subsection{Segnale di gate}
 Al fine di ridurre il rapporto segnale/rumore nelle misure di spettro [solo in queste???] si sfrutta la modalità di acquisizione con gate dell'analizzatore multicanale. Tale segnale si costruisce a partire dalla coincidenza tra gli output dei due scintillatori. In tale modo si ordina l'acquisizione del segnale in output dell'inorganico solamente se viene rivelato in coincidenza temporale ad esso un evento nello scintillatore plastico, idealmente dovuto all'elettrone rinculante.
 \\
@@ -175,16 +211,14 @@ Il segnale in ingresso al gate deve essere conforme per durata al segnale di inp
 \end{itemize}
 
 L'efficacia del metodo di acquisizione con gate dipende però fortemente dalla rivelabilità dell'elettrone rinculante, e sarà pertanto massimamente efficacie ad angoli di diffusione alti, per i quali l'energia cinetica trasferita è massima. \\
-A piccoli angoli di diffusione, per contro, l'efficienza del gate risulta ampiamente ridotta, al punto da rendere la procedura completamente inefficacie. [MAGARI IMMAGINE GATE NO GATE STESSO ANGOLO]. Ci si è pertanto limitati ad sfruttare il segnale di gate per angoli di diffusione $|\alpha|>30°$. 
+A piccoli angoli di diffusione, per contro, l'efficienza del gate risulta ampiamente ridotta, al punto da rendere la procedura completamente inefficace. [MAGARI IMMAGINE GATE NO GATE STESSO ANGOLO]. Ci si è pertanto limitati ad sfruttare il segnale di gate per angoli di diffusione $|\alpha|>30°$. 
 
-\subsection{A}
 
 \section{Risultati sperimentali}
 
 
 \section{Conclusioni}
-
-
+Fare il mea culpa sulla determinazione del punto di lavoro dell'inorganico che si poteva in qualche modo cercare un'alimentazione per la quale era minima l'analisi della FWHM, poi distanza tra scintillatore plastico e sorgente
 
 \input{bibcompton.bib}
 

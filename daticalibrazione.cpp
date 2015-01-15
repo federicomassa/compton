@@ -9,6 +9,8 @@
 #include <TFile.h>
 #include <TLine.h>
 
+
+
 TFile* out = new TFile("calib_pseudo.root","RECREATE");
 int imax = 10000;
 double ry;
@@ -30,8 +32,10 @@ double ry;
        return r;} */
 
 void daticalibrazione(){
+  TCanvas *c1 = new TCanvas("c1","c1",1000,700);
   double errE[78];
 double chgraph[78];
+ double meanE[78];
   //      TCanvas *c1 = new TCanvas();
       TRandom3 rndgen;
       // string sources[7] = {"Am1","Am2","Co1","Co2","Na1","Na2","Cs"};
@@ -47,6 +51,9 @@ double chgraph[78];
    //  double cherr[7] = {81.65605,61.1465,63.43949,60.38217,92.03397,59.40552,82.03822}; //FWHM/2
    double cherr[7] = {69.34696,51.9291,53.8764,51.2800,78.16,50.4505,69.6715}; 
    double rchval[7]; 
+
+ TGraphErrors *meas_graph = new TGraphErrors(7,chval,enval,NULL,NULL);
+
    for (int ch = 100; ch <= 7800; ch = ch + 100) {
      cout << "Canale: " << ch << endl;
      TH1F *hy = new TH1F("hy","E histogram",100,-33+0.104*ch-1.8E-5*ch*ch+4.03E-9*ch*ch*ch-100,-33+0.104*ch-1.8E-5*ch*ch+4.03E-9*ch*ch*ch+100);
@@ -76,89 +83,32 @@ double chgraph[78];
 //     fitfunc->SetParameter(0,0.1);
 	 //   fitfunc->SetParameters(-30,0.1,1E-5);
      graph->Fit(fitfunc,"0QRS");
-     //   cout << "Cubic Fit Details: " << endl;
-     //  frp->Print();
-     //  TMatrixDSym covMatrix(frp->GetCovarianceMatrix());
-     //   covMatrix.Print();
-    
-   
-     
-     
-  ////Cubica: param errors
-  //   double eparam3[4];
-  //   for (int i = 0; i <= 3; i++) {
-         
-	 //      eparam3[i] = double(pow(frp->CovMatrix(i,i),0.5));}
-//     Usando gli errori di tutti i parametri senza covarianza
-//     for (int i = 0; i <= 3; i++) {
-//     fitfunc->SetParameter(i,fitfunc->GetParameter(i)+ (eparam3[i]));}
-////     fitfunc->SetParameter(i,fitfunc->GetParameter(i)+1.65E-3);}
-//     fitfunc->SetLineColor(kOrange);
-////     fitfunc->DrawClone("SAME");
-//     
-//     for (int i = 0; i <= 3; i++) {
-//     fitfunc->SetParameter(i,fitfunc->GetParameter(i)- 2*(eparam3[i]));}
-////     fitfunc->SetParameter(i,fitfunc->GetParameter(i)-2*1.65E-3);}
-//     fitfunc->SetLineColor(6);
-////     fitfunc->DrawClone("SAME");
-
-//Calcolo errori cubica con covarianza, tentativo
-
-
- 
-// cout << "provaerr: "<< endl;
-// cout << varerr(7000,frp) << endl;
-// cout << 2*coverr(7000,frp) << endl;
-     
-
-//
-// //  Linfit: param errors
-//     double *eparam = new double;
-//     for (int i = 0; i <= 1; i++) {
-//         *(eparam+i) = pow(lfrp->CovMatrix(i,i),0.5);}
-
-
-                      
-         
-     //for (int i = 0; i <= 1; i++) {
-//     linfit->SetParameter(i,linfit->GetParameter(i)+ *(eparam+i));}
-//     linfit->SetLineColor(3);
-//     linfit->SetLineStyle(2);
-//     linfit->DrawClone("SAME");
-//     
-//     for (int i = 0; i <= 1; i++) {
-//     linfit->SetParameter(i,linfit->GetParameter(i)-2*(*(eparam+i)));}
-//     linfit->SetLineColor(3);
-//     linfit->SetLineStyle(2);
-//     linfit->DrawClone("SAME"); 
-
-     
-   //  TF1* tom = new TF1("Tommaso", "1.39364E-5*x*x+0.0868444*x+10.4319",0,8192);
-   //tom->DrawClone("SAME");
-     
-    // TLegend* leg = new TLegend(0.1,0.7,0.48,0.9);
-//     leg->SetHeader("Legend Title");
-//     leg->AddEntry(graph, "Prova graph", "le");
-//     leg->AddEntry(linfit, "Prova linfit", "l");
-//     leg->AddEntry(fitfunc, "Prova fitfunc", "l");
-//     leg->SetFillColor(0);
-//     leg->Draw();
-//     
      ry = fitfunc->GetParameter(0)+fitfunc->GetParameter(1)*ch+fitfunc->GetParameter(2)*ch*ch+fitfunc->GetParameter(3)*ch*ch*ch;
      hy->Fill(ry);
      delete graph;
      delete fitfunc;
    }
-   errE[int(double((ch-100))/100)] = hy->GetRMS();
+     errE[int(double((ch-100))/100)] = hy->GetRMS(); //assoluto
+     //errE[int(double((ch-100))/100)] = hy->GetRMS()/(hy->GetMean()); //relativo 
+   meanE[int(double((ch-100))/100)] = hy->GetMean(); 
    chgraph[int(double((ch-100))/100)] = double(ch);
    delete hy;
    }
+   c1->cd();
+   TGraphErrors *expected = new TGraphErrors(78,chgraph,meanE,NULL,errE);
+   expected->SetFillColor(kYellow);
+   expected->SetTitle("Curva di calibrazione;Canali;Energia (keV)");
+   expected->DrawClone("E4AL");
+   meas_graph->DrawClone("PESame");
+
+   TCanvas *c2 = new TCanvas("c2","graph",1000,700);
+   c2->cd();
    TGraphErrors *errgraph = new TGraphErrors(78,chgraph,errE,NULL,NULL);
    errgraph->SetTitle("Incertezza sull'energia;Canale;Incertezza energia (keV)");
    errgraph->SetMarkerStyle(kFullDotSmall);
    errgraph->SetMarkerColor(kRed);
    errgraph->SetMarkerSize(3);
-   errgraph->DrawClone("AP");
+   errgraph->DrawClone("APE");
    TLine* line1 = new TLine(525.74,0,525.74,30);
    TLine* line2 = new TLine(1048.9,0,1048.9,30);
    TLine* line3 = new TLine(7002.736,0,7002.736,30);
