@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.29)  14 JAN 2015 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.29)  16 JAN 2015 20:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -396,153 +396,204 @@ No file compton.ind.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 54.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 57.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 54.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 57.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
+Underfull \hbox (badness 10000) in paragraph at lines 56--58
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 66--72
+Underfull \hbox (badness 10000) in paragraph at lines 69--75
 
  []
 
 [3]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 84.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 87.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 88.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 91.
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 93.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 96.
 
 
-Overfull \hbox (0.28925pt too wide) in paragraph at lines 97--98
+Overfull \hbox (0.28925pt too wide) in paragraph at lines 100--101
 \OT1/cmr/m/n/14.4 La misura della po-sizione an-go-lare dello scin-til-la-tore 
 in-or-gan-ico ^^Re soggetta
  []
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 100.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 103.
 
 
-Overfull \hbox (13.88239pt too wide) in paragraph at lines 100--101
+Overfull \hbox (13.88239pt too wide) in paragraph at lines 103--104
 \OT1/cmr/m/n/14.4 dalla lim-i-tata ca-pacit^^Ra da parte dell'occhio umano di v
 a-l-utare l'allineamento
  []
 
 [4]
-Overfull \hbox (13.59901pt too wide) in paragraph at lines 112--113
+Overfull \hbox (13.59901pt too wide) in paragraph at lines 115--116
 []\OT1/cmr/m/n/14.4 Considerando l'energia me-dia della sor-gente uti-liz-zata 
 (Cobalto, $\OML/cmm/m/it/14.4 E=m[] \OT1/cmr/m/n/14.4 =
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 [5]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 136.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 139.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 152.
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 155.
 
 [6]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 167.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 170.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--170
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
  []
-
-
-LaTeX Warning: Citation `delprete_normalreg' on page 7 undefined on input line 
-172.
 
 [7]
-
-LaTeX Warning: Citation `delprete_normalreg' on page 8 undefined on input line 
-177.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
+Underfull \hbox (badness 10000) in paragraph at lines 184--186
 
  []
 
-[8]
-Overfull \hbox (2.76048pt too wide) in paragraph at lines 195--195
+[8] <"calibrazione2".png, id=37, 1142.2675pt x 718.685pt>
+File: "calibrazione2".png Graphic file (type png)
+
+<use "calibrazione2".png>
+Package pdftex.def Info: "calibrazione2".png used on input line 200.
+(pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
+ <"err_en4".png, id=38, 1142.2675pt x 718.685pt>
+File: "err_en4".png Graphic file (type png)
+
+<use "err_en4".png>
+Package pdftex.def Info: "err_en4".png used on input line 206.
+(pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (2.76048pt too wide) in paragraph at lines 213--213
  |[]\OT1/cmr/bx/n/14.4 Determinazione di $\OML/cmm/m/it/14.4 m[]$ \OT1/cmr/bx/n
 /14.4 dal fit della re-lazione Energia-Angolo| 
  []
 
-
-Overfull \hbox (12.4985pt too wide) in paragraph at lines 201--204
+[9 <./calibrazione2.png>]
+Overfull \hbox (12.4985pt too wide) in paragraph at lines 219--222
 \OT1/cmr/m/n/14.4 in queste???] si sfrutta la modalit^^Ra di ac-qui-sizione con
  gate dell'analizzatore
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 206.
+[10 <./err_en4.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 224.
+
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 206.
- [9]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 224.
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 214.
 
-[10] (./bibcompton.bib) [11] (./compton.aux)
+LaTeX Warning: Command \textdegree invalid in math mode on input line 232.
+
+[11]
+Overfull \hbox (7.26454pt too wide) in paragraph at lines 235--240
+\OT1/cmr/m/it/14.4 spalla Comp-ton\OT1/cmr/m/n/14.4 , dovuta agli eventi Comp-t
+on ad an-golo mas-simo all'interno
+ []
+
+[12]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 244.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--252
+
+ []
+
+<"distanza_picchi".png, id=54, 1142.2675pt x 718.685pt>
+File: "distanza_picchi".png Graphic file (type png)
+
+<use "distanza_picchi".png>
+Package pdftex.def Info: "distanza_picchi".png used on input line 259.
+(pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
+
+
+LaTeX Warning: Citation `subsec:picchi' on page 13 undefined on input line 264.
+
+
+[13] [14 <./distanza_picchi.png>] [15] (./bibcompton.bib
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+[]\OT1/cmr/m/n/14.4 J. E. Parks, The Comp-ton Effect--
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
+\OT1/cmr/m/n/14.4 Compton Scat-ter-ing and Gamma Ray,
+ []
+
+
+Overfull \hbox (102.81805pt too wide) in paragraph at lines 4--5
+\OT1/cmr/m/n/14.4 http://www.phys.utk.edu/labs/modphys/Compton%20Scattering%20E
+xperiment.pdf 
+ []
+
+) [16] (./compton.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4739 strings out of 493109
- 67132 string characters out of 6135009
- 141107 words of memory out of 5000000
- 8100 multiletter control sequences out of 15000+600000
- 11998 words of font info for 47 fonts, out of 8000000 for 9000
+ 4766 strings out of 493109
+ 67578 string characters out of 6135009
+ 141150 words of memory out of 5000000
+ 8121 multiletter control sequences out of 15000+600000
+ 12693 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,5n,30p,702b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -553,12 +604,13 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></us
 r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on compton.pdf (11 pages, 134429 bytes).
+cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on compton.pdf (16 pages, 220625 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 105 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,7 +12,7 @@
 
 
 TFile* out = new TFile("calib_pseudo.root","RECREATE");
-int imax = 10000;
+int imax = 10;
 double ry;
  double varerr(double x,TFitResultPtr fit){ 
  double xerr = 0; //approx media errori ch (80*80)
@@ -88,12 +88,48 @@ double chgraph[78];
      delete graph;
      delete fitfunc;
    }
+
+
+   
+     //analisi risultati pseudoesperimenti
      errE[int(double((ch-100))/100)] = hy->GetRMS(); //assoluto
      //errE[int(double((ch-100))/100)] = hy->GetRMS()/(hy->GetMean()); //relativo 
    meanE[int(double((ch-100))/100)] = hy->GetMean(); 
    chgraph[int(double((ch-100))/100)] = double(ch);
    delete hy;
    }
+
+
+
+   //Calibrazione con dati misurati
+ for (int n = 0; n < 7; n++) {rchval[n] = chval[n];}
+  // TF1* noam = new TF1("No_Am", "474.629+0.029255*x-3.66635E-5*x*x+6.70617E-9*x*x*x",0,8192);
+//   noam->SetLineStyle(2);
+//   noam->SetLineColor(kOrange);
+//   noam->DrawClone("SAME");
+    TGraphErrors *graph = new TGraphErrors(7,rchval,enval,cherr,NULL);
+     graph->SetTitle("Calibrazione;Canale;Energia(keV)");
+     graph->GetYaxis()->SetTitleOffset(1.4);
+     graph->SetLineColor(kRed);
+     graph->SetMarkerColor(kRed);
+     graph->SetMarkerStyle(20);
+     graph->SetMarkerSize(0.8);
+     // graph->DrawClone("APE"); 
+     
+     //TF1 *fitfunc = new TF1("Fitting Function", "[0]+[1]*x+[2]*x*x", 0,8192);    
+         TF1 *fitfunc = new TF1("Fitting Function", "[0]+[1]*x+[2]*x*x+[3]*x*x*x", 0,8192);
+// TF1 *fitfunc = new TF1("Fitting Function", "[0]+[1]*x+[2]*x*x+4.03156E-9*x*x*x", 0,8192);
+//     TF1 *fitfunc = new TF1("Cubic Fit", "-33.0933+[0]*x-1.80489E-5*x*x+4.03119E-9*x*x*x", 0,8192);
+	 fitfunc->SetParameters(-30,0.1,-1E-5,4E-9);
+//     fitfunc->SetParameter(0,0.1);
+	 //   fitfunc->SetParameters(-30,0.1,1E-5);
+	 cout << "Risultati fit con dati misurati..." << endl;
+     graph->Fit(fitfunc,"0RS");
+     delete graph;
+     delete fitfunc;
+     //FINE CALIBRAZIONE DATI MISURATI
+
+
    c1->cd();
    TGraphErrors *expected = new TGraphErrors(78,chgraph,meanE,NULL,errE);
    expected->SetFillColor(kYellow);
@@ -125,7 +161,7 @@ double chgraph[78];
  line7->Draw();
    errgraph->Write();
    out->Close();
-     }             
+}      
      
      
 

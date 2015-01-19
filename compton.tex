@@ -50,6 +50,9 @@ Marco \textsc{Montella}
 
 \section{Apparato sperimentale} \label{sec:apparato}
 \subsection{Goniometro}
+
+
+
 Essendo lo scintillatore inorganico vincolato a muoversi su un arco di circonferenza, risulta di fondamentale importanza la misura della posizione angolare di quest'ultimo rispetto a uno zero che non deve necessariamente coincidere con il centro geometrico del fascio. \\
 A questo scopo si è posizionato lo scintillatore plastico a circa $2 cm$ dall'estremità del collimatore e nel punto medio della congiungente degli estremi della guida dell'inorganico. Abbiamo quindi posizionato un goniometro prestando attenzione al fatto che il centro si trovasse sulla verticale del punto di incontro tra l'asse del collimatore e il centro del plastico. \'E legittimo supporre infatti che la maggior parte delle interazioni avvengano in un intorno di questo punto, le cui dimensioni sono determinate dalla larghezza del fascio. \\
 
@@ -181,15 +184,30 @@ f\ = \ \frac{a_r^2}{s^2}\ = \ \frac{\chi^2_{r-1}-\chi^2_r}{\chi^2_r}\ \sim \ F_{
 \end{equation}
 Nella quale $n$ rappresenta il numero di punti sperimentali su cui il fit è effettuato. Tale metodo non permette tuttavia di testare il coefficiente del quinto grado, per il quale il numero di gradi di libertà della distribuzione Fisher-Snedecor si riduce a zero. Ci si è pertanto limitati a effettuare i test d'ipotesi per $R<6$. In tabella sono riportati i valori delle variabili statistiche calcolate al fine di ottenere il P-Value corrispondente a ciascuna ipotesi nulla.\\
 
+\subsubsection{Contributo all'incertezza sull'energia}
+
 L'incertezza sull'energia è ricavata simulando un determinato numero di esperimenti secondo lo schema:
 \begin{enumerate}
 \item Generazione per ogni pseudoesperimento della posizione in canali dei picchi di emissione delle sorgenti di calibrazione secondo una distribuzione gaussiana con valor medio e varianza uguali ai rispettivi valori misurati sperimentalmente.
 \item Fit dei punti così generati utilizzando sempre un polinomio di terzo grado.
 \item Canale per canale si è costruito un istogramma dei valori dell'energia ad esso corrispondente ottenuta in ciascuno degli pseudoesperimenti.
-\item Estrazione, canale per canale, della media e della varianza della distribuzione così tracciata.
+\item Estrazione, canale per canale, della media e dello stimatore della varianza della distribuzione così tracciata.
 \end{enumerate}
 
-La banda di incertezza sulla curva di calibrazione e le incertezze assolute e relative in funzione dell'energia sono mostrate in [FIGURA]
+La banda di incertezza sulla curva di calibrazione e le incertezze assolute in funzione dell'energia sono mostrate nelle figure \ref{fig:calib_en} e \ref{fig:err_en}.
+
+\begin{figure}[h!] 
+\includegraphics[width=\textwidth]{"calibrazione2"}
+\caption{...}
+\label{fig:calib_en}
+\end{figure}
+
+\begin{figure}[h!] 
+\includegraphics[width=\textwidth]{"err_en4"}
+\caption{...}
+\label{fig:err_en}
+\end{figure}
+
 
 \section{Metodo di misura}
 \subsection{Determinazione di $m_e$ dal fit della relazione Energia-Angolo}
@@ -213,8 +231,55 @@ Il segnale in ingresso al gate deve essere conforme per durata al segnale di inp
 L'efficacia del metodo di acquisizione con gate dipende però fortemente dalla rivelabilità dell'elettrone rinculante, e sarà pertanto massimamente efficacie ad angoli di diffusione alti, per i quali l'energia cinetica trasferita è massima. \\
 A piccoli angoli di diffusione, per contro, l'efficienza del gate risulta ampiamente ridotta, al punto da rendere la procedura completamente inefficace. [MAGARI IMMAGINE GATE NO GATE STESSO ANGOLO]. Ci si è pertanto limitati ad sfruttare il segnale di gate per angoli di diffusione $|\alpha|>30°$. 
 
+\subsubsection{Caratteristiche degli spettri}
+Nelle figure [1 e 2!!!!!!!!!!!!!!!!!!!] sono mostrati gli spettri ottenuti nelle due diverse modalità di acquisizione posizionando lo scintillatore inorganico ad un angolo di 30° sulla destra dello zero del goniometro. \\
+Lo spettro acquisito senza l'ausilio del gate presenta due picchi marcati in corrispondenza delle energie dei fotoni primari emessi dalla sorgente. Se ne deduce che per angoli uguali o inferiori a 30° il numero di fotoni che penetra la schermatura della sorgente venendo così rivelata nell'inorganico è superiore al numero di eventi legittimi rivelati dall'inorganico in seguito ad un'interazione Compton nello scintillatore plastico.
+La [figura2!!!!!!!!!!!!!!!] mostra come l'acquisizione in modalità GATE permetta di ridurre drasticamente il fondo di fotoni diretti, come deducibile dal rapporto tra le ampiezze tra i fotopicchi (non risolti) e i picchi, appena accennati, di fascio diretto.\\
+Nello spettro ottenuto con l'ausilio del gate è inoltre ben distinguibile la \textit{spalla Compton}, dovuta agli eventi Compton ad angolo massimo all'interno dello scintillatore inorganico. Un elemento analogo è ravvisato anche nella [figura1], per quanto in questo caso esso sia dovuto agli eventi di backscattering nell'inorganico causati dai fotoni di fascio diretto, in maggioranza.\\
+L'intervallo di energie dei fotoni Compton nel presente esperimento comprende l'energia di soglia sopra la quale è possibile la produzione di coppia $e^+\ e^-$. Ciononostante, alle energie dell'esperimento le sezioni d'urto di produzione e Compton stanno nel seguente rapporto:
+\begin{equation}
+\frac{\sigma_{pair}}{\sigma_{compt}}\simeq 10^{-2}
+\end{equation}
+Il che giustifica la non visibilità dei tipici picchi a $E_\gamma \ - \ m_e c^2$ e $E_\gamma \ - \ 2m_e c^2$ dovuti alla fuga di uno o entrambi i fotoni da $511 keV$ prodotti nell'annichilazione del positrone proveniente dall'evento di produzione di coppia.\\
+Attenendosi sempre allo spettro con gate [immag!!!!!2], si osserva una struttura complessa a energie di circa $200 keV$. Essa è dovuta al gran numero di fotoni primari che subiscono un'interazione Compton a $\theta \ \simeq \ 180°$ nel materiale di schermo in prossimità della sorgente per poi fuoriuscire dal vano, subire un'interazione Compton nel plastico ed essere rivelati infine nello scintillatore inorganico. L'energia di questi fotoni è circa:
+
+\begin{equation}
+E'\ \simeq \ \frac{E}{1+\frac{2E}{m_e}} \ = \ 210\ \emph{keV}
+\end{equation}
+
+I fotoni in questione vengono rivelati nello scintillatore inorganico tramite i medesimi processi che interessano i fotoni primari, e risulteranno dunque in una struttura spettrale analoga, con fotopicchi, spalla e continuo Compton difficilmente risolvibili. \\
+%RIMUOVERE!!!!!![Il fatto che lo spettro di backscattering si trovi a energie costanti con l'angolo è giustificabile con il fatto che la relazione energia-angolo per un fenomeno compton con energia primaria E generica ha pendenza proporzionale a E quadro. Pertanto la pendenza sarà 0.04 .]RIMUOVEREEEEEEE
+
+A energie di circa $75 \ keV$ si trova inoltre uno stretto picco compatibile con i raggi X \textit{raggi X} molli emessi per fluorescenza dal piombo contenuto nell'apparato di schermo. \cite{X_Ray}
+
+\subsubsection{Risoluzione dei fotopicchi}
+La capacità di distinguere due fotopicchi è legata alla differenza di energia tra i picchi dei fotoni diffusi ad un dato angolo. Si è dunque ricavata la relazione algebrica che lega la suddetta differenza alle energie dei fotoni emessi dalla sorgente e all'angolo di misura. 
+
+\begin{figure}
+\includegraphics[width=\textwidth]{"distanza_picchi"}
+\caption{Differenza di energia tra i picchi dei fotoni diffusi del Cobalto in funzione dell'angolo di misura}
+\label{fig:dist_picchi}
+\end{figure}
+
+Come si può vedere in Fig. \ref{fig:dist_picchi} la differenza di energia tra i fotopicchi tende a diminuire, rendendo sempre più difficile risolverli all'aumentare dell'angolo di misura. La risolvibilità dipende infatti dal rapporto tra questa quantità e le FWHM dei singoli picchi. Nella maggior parte dei casi non si è riusciti a risolvere i due fotopicchi (sez. \cite{subsec:picchi}), per cui è stato deciso di procedere come segue:
+
+\begin{enumerate}
+\item Se la forma dello spettro misurato è significativamente diversa da una gaussiana è stato eseguito un fit \textit{bigaussiano} ed è stata estratta la media aritmetica dei picchi.
+\item Se la forma dello spettro misurato è compatibile con quella di una gaussiana è stato estratto il valore del massimo locale.
+\end{enumerate}
+
+Ad angoli sufficientemente alti, in cui la differenza di energia tra i picchi è minore, si verifica la seconda condizione. Essendo l'altezza dei due picchi generalmente diversa, è possibile che l'energia del massimo non corrisponda alla media dell'energia dei due picchi. Per studiare quest'effetto si è stimata l'altezza relativa dei picchi ad un determinato angolo supponendo che i due picchi abbiano la stessa FWHM:
+
+\begin{equation}
+N(\theta) \propto \frac{d\sigma}{d\Omega} \Phi \rightarrow \frac{N_2(\theta)}{N_1(\theta)} \propto \frac{\frac{d\sigma_2}{d\Omega}}{\frac{d\sigma_1}{d\Omega}} \frac{\Phi_2}{\Phi_1}
+\nonumber
+\end{equation}
+
+
 
 \section{Risultati sperimentali}
+\subsection{Misura dei picchi} \label{subsec:picchi}
+
 
 
 \section{Conclusioni}
