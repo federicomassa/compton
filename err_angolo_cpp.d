@@ -49,5 +49,7 @@
 ./err_angolo_cpp.so: /home/federico/root/include/TMap.h
 ./err_angolo_cpp.so: /home/federico/root/include/THashTable.h
 ./err_angolo_cpp.so: /home/federico/root/include/TUrl.h
+./err_angolo_cpp.so: /home/federico/root/include/TGraphErrors.h
+./err_angolo_cpp.so: /home/federico/root/include/TGraph.h
 ./err_angolo_cpp.so: /home/federico/root/include/cintdictversion.h /home/federico/root/include/RVersion.h
 err_angolo_cpp__ROOTBUILDVERSION= 5.34/08

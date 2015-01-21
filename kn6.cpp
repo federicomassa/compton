@@ -25,9 +25,10 @@ double Klein_Nishina(double *vars, double *pars) {
 
 void KN6() {
   //   const int npoints = 6;
-     const int npoints = 5;
-     //  double angolo_f[npoints] = {50,45,-40,-45,-55,-60};
-     double angolo_f[npoints] = {50,45,-45,-55,-60};
+     const int npoints = 8;
+     double angolo_f[npoints] = {60,55,50,45,-40,-45,-55,-60};
+     //       double angolo_f[npoints] = {50,45,-40,-45,-55,-60};
+       //  double angolo_f[npoints] = {50,45,-45,-55,-60};
      double angolo[npoints];
      
      TCanvas *c1 = new TCanvas(); 
@@ -37,9 +38,10 @@ void KN6() {
      
      for (int i = 0; i < npoints; i++) {
          angolo[i] = angolo_f[i]-1.38;}
-         
+     double energia[npoints] = {16766/0.9556/0.3858,18570/0.958/0.3475,21813/0.96/0.3122,23901/0.9464/0.2804,25323/0.8533/0.2519,23891/0.9464/0.2804,19632/0.958/0.3475,18121/0.9558/0.3858};
      //  double energia[npoints] = {21813,23901,25323,23891,19632,18121};
-  double energia[npoints] = {21813/0.49,23901/0.532,23891/0.512,19632/0.48,18121/0.47};
+     // double energia[npoints] = {21813/0.96/0.3122,23901/0.9464/0.2804,25323/0.8533/0.2519, 23891/0.9464/0.2804,19632/0.958/0.3475,18121/0.9558/0.3858};
+     //     double energia[npoints] = {21813,23901,25323,23891,19632,18121};
      double thenergia[npoints];
      
      for (int i = 0; i < npoints; i++) {
@@ -48,16 +50,16 @@ void KN6() {
      //    double integral[npoints] = {23.8*pow(thenergia[0],3),26.12*pow(thenergia[1],3),25.26*pow(thenergia[2],3),17.39*pow(thenergia[3],3),12.80*pow(thenergia[4],3)};
      double errenergia[npoints], errangolo[npoints];
 for (int i = 0; i < npoints; i++) { 
-    errenergia[i] = sqrt(thenergia[i]);
-    errangolo[i] = 1.3;
+    errenergia[i] = sqrt(energia[i]);
+    errangolo[i] = 2;
 }   
 // [2]+[0]/((1+1250*cos(x*(4*atan(1)/180.))/[1])*(1+1250*cos(x*(4*atan(1)/180.))/[1]))    *   (1/(1+1250*cos(x*(4*atan(1)/180.))/[1])+(1+1250*cos(x*(4*atan(1)/180.))/[1])-1+cos(x*(4*atan(1)/180.))*cos(x*(4*atan(1)/180.))
     //1252.85
 //    TF1* fitfunc = new TF1("Fitting Function", "[0]/((1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])*(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1]))*(1/(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])+(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])-1+cos((x-[2])*(4*atan(1)/180.))*cos((x-[2])*(4*atan(1)/180.)))",-90,90);
  TF1 *fitfunc = new TF1("Fitting Function", Klein_Nishina, -90,90,3);
 
-     fitfunc->SetParameters(4E4,2,-2);
-     
+     fitfunc->SetParameters(135000,2,-2);
+     //     fitfunc->FixParameter(1,500);
      TGraphErrors *graph = new TGraphErrors(npoints,angolo_f,energia,errangolo,errenergia);
      graph->SetTitle("Klein Nishina");
      graph->GetXaxis()->SetTitle("Angolo(°)");
@@ -71,7 +73,7 @@ for (int i = 0; i < npoints; i++) {
      fitfunc->DrawClone("SAME");
      
 
-        fitfunc->SetParameters(4E4,2,-2);
+      fitfunc->SetParameters(4E4,2,-2);
       fitfunc->SetLineColor(kRed);
       fitfunc->DrawClone("SAME");
     // TPaveText* pt = new TPaveText(.05,.1,.95.,.8);
