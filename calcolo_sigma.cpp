@@ -6,7 +6,7 @@ using namespace std;
 
 
 double me = 511; //keV
-double r0 = 2.81794; //fm 
+double r0 = 2.81794E-13; //cm 
 
 double Ef(double Ei, double theta) {
   return Ei/(1+Ei/me*(1-cos(theta*4*atan(1)/180)));

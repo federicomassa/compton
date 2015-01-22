@@ -32,24 +32,25 @@ void electron() {
      double thenergia[npoints];
      
      for (int i = 0; i < npoints; i++) {
-         thenergia[i] = energia[i]+60;}
+         thenergia[i] = energia[i]+55.6;}
      
      double errenergia[npoints], errangolo[npoints];
 for (int i = 0; i < npoints; i++) {
   //  errenergia[i] = 13;
   //  errangolo[i] = 1.5   ;
-  errenergia[i] = 17.5;
+  errenergia[i] = 12.5;
   errangolo[i] = 1;
 }   
     //1252.85
     // TF1* fitfunc = new TF1("Fitting Function", "[2]+1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
- TF1* fitfunc = new TF1("Fitting Function", "1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
+ TF1* fitfunc = new TF1("Fitting Function", "-[2]+1252.85/(1+1252.85/[0]*(1-cos((x-[1])*4*atan(1.)/180.)))",-90,90);
  //     fitfunc->SetParameters(500,2,-60);
- fitfunc->SetParameters(500,2);
+ fitfunc->SetParameters(500,2,55);
+ // fitfunc->FixParameter(0,510.9989);
     fitfunc->SetParName(0,"Mass");
      fitfunc->SetParName(1,"Center");
      //    fitfunc->SetParName(2,"Energy Shift");
-     TGraphErrors *graph = new TGraphErrors(npoints,angolo_f,energia_corretta,errangolo,errenergia);
+     TGraphErrors *graph = new TGraphErrors(npoints,angolo_f,energia,errangolo,errenergia);
      graph->SetTitle("Massa elettrone");
      graph->GetXaxis()->SetTitle("Angolo(°)");
      graph->GetYaxis()->SetTitle("Energia(keV)");

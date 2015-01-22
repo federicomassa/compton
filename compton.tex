@@ -1,4 +1,4 @@
-\documentclass[5pt]{article}
+\documentclass[8pt]{extarticle}
 \usepackage{makeidx}
 \usepackage{graphicx}
 \usepackage{amsmath}
@@ -205,18 +205,18 @@ Questo tipo di incertezza, come si vedrà in sez.!!!! non si riflette in un effe
 Calcoli teorici\cite{compton_total} forniscono il valore della sezione d'urto Compton totale:
 
 \begin{equation}
-\sigma = 3.7 \cdot 10^{-25} cm^2
+\sigma = 1.9 \cdot 10^{-25} cm^2
 \nonumber
 \end{equation}
 
 Considerando l'energia media della sorgente utilizzata (Cobalto, $E/m_e = 2.45$) gli urti possono essere considerati avvenenti tra fotoni ed elettroni liberi. Considerata anche la densità di un polimero tipico (circa $1 g/cm^3$) e il fatto che l'elemento preponderante in questi materiali è il carbonio (in cui metà della massa è dovuta a protoni) è possibile stimare la densità numerica di elettroni, da cui il libero cammino medio di un fotone: \\
  
 \begin{equation}
-\lambda = \frac{1}{n_{elettroni} \cdot \sigma} = \frac{m_{protone}}{\frac{1}{2} \cdot \rho \cdot \sigma} \approx 10 \ cm
+\lambda = \frac{1}{n_{elettroni} \cdot \sigma} = \frac{m_{protone}}{\frac{1}{2} \cdot \rho \cdot \sigma} \approx 20 \ cm
 \nonumber
 \end{equation}
 
-Essendo questa misura un fattore quasi 10 maggiore dello spessore dello scintillatore plastico, è ragionevole supporre che la probabilità di interazione sia costante lungo lo spessore dello scintillatore. La non conoscenza del punto di interazione porta ad un errore sulla lettura dell'angolo, come è schematizzato in fig.!!!REF!!!. 
+Essendo questa misura un fattore 10 maggiore dello spessore dello scintillatore plastico, è ragionevole supporre che la probabilità di interazione sia costante lungo lo spessore dello scintillatore. La non conoscenza del punto di interazione porta ad un errore sulla lettura dell'angolo, come è schematizzato in fig.!!!REF!!!. 
 
 %\includegraphics[width=\textwidth]{""} \label{fig:err_angolo}
 
@@ -253,8 +253,22 @@ Un'altra fonte di errore è quella dovuta all'estensione del rivelatore stesso, 
 \nonumber
 \end{equation}
 
+La somma di questi effetti è stata simulata con il metodo Montecarlo, distribuendo i punti di interazione uniformemente lungo lo spessore dello scintillatore plastico e gli angoli con la formula di Klein-Nishina. 
+Sono state quindi ricavate, in funzione dell'angolo di misura, le distribuzioni di energia dei fotoni che arrivano sullo scintillatore inorganico. Per ogni angolo è stata quindi calcolata la media di questa distribuita e ricavato l'angolo ad essa corrispondente. Il grafico della differenza tra l'angolo misurato e quello così ricavato è mostrato in Fig. \ref{fig:err_ang}.
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{errore_angolo}
+\caption{Grafico dell'errore commesso sulla lettura dell'angolo in funzione dell'angolo misurato.}
+\label{fig:err_ang}
+\end{center}
+\end{figure}
 
+Essendo stati utilizzati angoli compresi tra 20 e 60 gradi, l'errore commesso non supera gli $0.2 \ °$.
+
+A questo va sommato infine l'errore commesso a causa dello spostamento e riposizionamento dello scintillatore plastico\footnote{A causa della vicinanza dello scintillatore plastico al collimatore, per poter chiudere la sorgente era necessario rimuovere il plastico. Nonostante le attenzioni rivolte al riposizionamento, questa è risultata una fonte di errore importante}, che è stato stimato essere uguale ad uno spostamento in direzione parallela al fascio di $\pm 1 \ cm$. \\
+
+L'errore totale commesso sull'angolo è stato quindi di $1 \ °$.
 
 
 \subsection{Calibrazione dello scintillatore inorganico}
@@ -368,25 +382,271 @@ Ad angoli sufficientemente alti, in cui la differenza di energia tra i picchi è
 \frac{E'(\theta,E_1) + E'(\theta,E_2)}{2} \neq E'(\theta, \frac{E_1+E_2}{2})
 \end{equation}
 
-Tuttavia è stato verificato che i due membri sono uguali entro un errore del $0.1 \ \%$, che è in ogni caso trascurabile rispetto all'errore sull'energia
+Tuttavia è stato verificato che i due membri sono uguali entro un errore del $0.1 \ \%$, che è in ogni caso trascurabile rispetto all'errore sull'energia.
 
 \subsection{Distanza tra la \textit{spalla Compton} e i fotopicchi}
 [VEDERE SE INTRODUZIONE] Assumendo che i fotoni in ingresso al rivelatore posseggano la medesima energia e che essi vi subiscano al massimo una sola interazione, la situazione in cui è massima l'energia trasferita al reticolo del cristallo senza che avvenga effetto fotoelettrico è quella in cui il fotone interagisca Compton con angolo di diffusione $theta_2 \ = \ 180°$. Sotto questi assunti, dunque, lo spettro continuo Compton misurato decresce rapidamente all'approssimarsi dell'end point, il quale è dato da:
 \begin{equation}
-E_{CE} \ = E' \ \ - \ \frac{E'(\theta_1)}{1+\frac{2E'(\theta_1)}{m_e}}     \nonumber
+E_{CE} \ = \ E' \ - \ \frac{E'(\theta_1)}{1+\frac{2E'(\theta_1)}{m_e}}     \nonumber
 \end{equation}
 Dove $\theta_1$ rappresenta l'angolo con cui avviene la prima diffusione Compton nello scintillatore plastico, risultante nei fotoni in ingresso all'inorganico con energia $E'$.
 La distanza tra i fotopicchi e spalla Compton è dunque funzione \textit{decrescente} dell'angolo a cui viene posto il rivelatore rispetto all'asse del fascio.\\
 La regione di spettro, idealmente vuota, tra spalla Compton e fotopicchi è in realtà occupata da un fondo di eventi dovuto a più di una interazione Compton nel NaI , per i quali l'energia massima depositata può eccedere il limite massimo della singola interazione. 
 Questo effetto, unitamente all'allargamento sperimentale degli spettri, che risulta in una coda a destra della spalla, rende la determinazione della posizione della spalla Compton relativamente ai fotopicchi un'operazione non sempre immediata. \\
-Il fit della distanza in funzione dell'angolo con la relazione teorica può portare ad una seconda stima della massa dell'elettrone, sebbene non indipendente rispetto alla stima effettuata fittando la sola relazione energia-angolo.
-
+Il fit della distanza in funzione dell'angolo con la relazione teorica può portare ad una seconda stima della massa dell'elettrone, sebbene non indipendente rispetto alla stima effettuata fittando la sola relazione energia-angolo.\\
+Una volta raccolti i dati ed effettuato il fit si è notato che le distanze misurate sono sistematicamente maggiori rispetto ai rispettivi valori teorici di una quantità compresa tra 40 e 80 keV. Per determinare se tale deviazione è frutto di errori sperimentali o meno si è utilizzato il software sviluppato dal gruppo [!!referenza], il quale ricostruisce lo spettro osservato simulando per ogni singolo fotone la probabilità di interazione nell'inorganico secondo i rapporti delle sezioni d'urto dei vari processi possibili, e tenendo inoltre conto della probabilità di fuga dei fotoni, della probabilità che ciascun fotone subisca più di una interazione e dell'effetto della risoluzione in energia sullo spettro.\\
+Negli spettro simulati si è calcolata la distanza tra la "presunta" spalla Compton e i fotopicchi, constatando una analoga deviazione dal valore teorico. Si è dunque concluso, essendo lo spettro ricostruito interamente determinato dalle quantità fisiche e dai parametri strumentali coinvolti, e non dal metodo di misura, che la spalla Compton effettiva non si trovi in corrispondenza del picco ad essa erroneamente associato in precedenza, bensì spostato rispetto ad esso a energie più alte. La differenza in energia, calcolata per ciascun angolo, è stata utilizzata sommata alle misure sperimentali di posizione della spalla Compton al fine di determinare se l'errore sistematico sui dati raccolti è insito nella natura delle interazioni con lo scintillatore, piuttosto che ad esempio ad una calibrazione errata.
 
 \section{Klein-Nishina}
 
+\subsection{Fit dei conteggi del segnale di gate}
+[APPUNTO, VEDERE QUANTO VARIA LA KLEIN NISHINA SUL DOMEGA DEL DETECTOR, EVENTUALMENTE CORREGGERE FITTANDO NON CON LA KLEIN MA CON IL SUO VALOR MEDIO NELL'INTERVALLO. NON PENSO CAMBI MOLTO]\\
+Si sono pertanto raccolti i conteggi in funzione dell'angolo di scattering utilizzando come imput il segnale di gate, ovvero un segnale sincrono [?????] alla coincidenza tra segnale di output dell'inorganico e del plastico. \\
+Il metodo risente dell'efficienza del segnale di gate, variabile in funzione dell'angolo come mostrato nella sezione \ref{Subsec:gate}. Per questo motivo si è pensato innanzitutto di limitare le misure agli angoli più grandi, dove l'elettrone responsabile del segnale di gate è più energetico, e in seguito di tentare una correzione dei dati modellizzando l'effetto.
+\subsection{Fit degli integrali dei fotopicchi} \label{subsec:fotopicchi}
+Un altro metodo per verificare la relazione è quello di utilizzare non tutto lo spettro ma solamente quello relativo ai fotopicchi. Essendo questi eventi provenienti dall'effetto fotoelettrico, si può risalire ad una quantità proporzionale al numero totale di eventi ad un dato angolo, e dunque alla sezione d'urto differenziale, dividendo l'integrale dei soli fotopicchi ad ogni angolo per la sezione d'urto fotoelettrica relativa a quell'energia.
+Questa sezione d'urto dipende dal particolare materiale. Da esperimenti condotti su NaI\cite{naicat} è stata estratta la dipendenza della sezione d'urto dall'energia, che risulta: \\
+\begin{equation}
+\sigma_{p.e.} \propto E^{-1.9}
+\nonumber
+\end{equation}
+
+Misure più accurate della presente richiederebbero una conoscenza precisa dell'esponente dell'energia, in quanto da esso dipende molto dell'errore commesso con questo metodo. \\
+
+\'E stato quindi eseguito un fit sfruttando la relazione: \\
+\begin{equation}
+\frac{I(\theta)}{\sigma_{p.e.}} \propto \frac{d\sigma}{d\Omega}
+\end{equation}
+
+Da un lato questo metodo ha il vantaggio di eliminare parte del fondo dovuto ad eventi spuri presenti nello spettro (emissione X, backscattering..), dall'altro subisce delle sistematiche a causa della mancata modellizzazione del fondo e del fatto che
+la sorgente utilizzata emette a due energie diverse e dunque richiederebbe una trattazione più rigorosa. \\ !!! CHECK!!!
+
+\subsubsection{Modello della soglia del plastico} \label{subsubsec:corr_soglia}
+La correzione si basa sulla stima, angolo per angolo, di un coefficiente moltiplicativo di correzione che rappresenti la frazione teorica sul totale degli eventi che producono un segnale sopra la soglia del discriminatore. Un calcolo rigoroso dei coefficienti presuppone la conoscenza della distribuzione di probabilità del segnale $p(V|M(\theta),w(\theta))$ (normalizzata a 1):
+\begin{equation}
+c(\theta)=\int_{V>V_{th}} \! p(V|M(\theta),w(\theta)) \mathrm{d}V
+\end{equation}
+M e w sono i generici parametri della distribuzione, funzioni dell'energia dell'elettrone e dunque dell'angolo di scattering.\\
+In prima analisi si è pensato di modellizzare il rilascio di energia da parte dell'elettrone nello scintillatore plastico tramite la distribuzione Landau-Vavilov, il cui valore di massima probabilità può essere calcolato a partire dalle caratteristiche fisiche del rivelatore e dalle variabili cinematiche dell'elettrone. Non è stato tuttavia possibile procedere ulteriormente su questa strada in quanto la distribuzione in questione risulta valida solamente quando il rapporto $k$ tra il valore più probabile di energia persa nel rivelatore e l'energia della particella è $k<<0.01$. A 50° si è calcolato:
+\begin{equation}
+MPV =  404\ \mathrm{keV} \ \ \ \ \ T_e  =  584\ \mathrm{keV}
+\end{equation}
+Nell'intervallo di angoli presi in considerazione si trova $k \ \in \ [0.5;0.9]$, al di fuori del limite di validità della Landau.\\
+Si è quindi pensato di procedere ad una stima rozza dei coefficienti utilizzando la distribuzione Normale, della quale si devono stimare i parametri di media e varianza.\\
+La media della distribuzione di ampiezza del segnalein tensione in arrivo al discriminatore è ottenuta come:
+\begin{equation}
+\mu(\theta)\ = \ \frac{q(\theta)}{\tau_{pulse}}\cdot R_{out} \nonumber
+\end{equation}
+\begin{equation}
+q(\theta)\ \simeq \ \frac{dE}{dx}L\rho\cdot \frac{photons}{\mathrm{keV}}\cdot e^{-L/\lambda_{att}} \cdot \eta_{coll}\cdot \eta_{guide}\cdot QE \cdot \delta^ {12}  \nonumber
+\end{equation}
+\\
+\\
+\begin{tabular}{|c|c|c|}
+\hline 
+L & Spessore plastico & 2.5 cm \\ 
+\hline 
+$\rho$ & Densità & 1.03 $g/cm^3$ \\ 
+\hline 
+• & Fotoni/keV & $\simeq$10 \\ 
+\hline 
+$\lambda_{att}$ & Lunghezza di attenuazione luce & 43 cm [REF] \\ 
+\hline 
+$\eta_{coll}$ & \% di $\gamma$ che arrivano alla base del plastico & $\simeq$0.2 \\ 
+\hline 
+$\eta_{guide}$ & Efficienza guida di luce & $\simeq$0.5 \\ 
+\hline 
+QE & Efficienza quantistica fotocatodo & 25\% \\ 
+\hline 
+$\tau_{pulse}$ & Durata impulso & $\simeq$10ns \\ 
+\hline 
+$R_{out}$ & Resistenza in uscita & 50 $\Omega$ \\ 
+\hline 
+\end{tabular} 
+\\
+L'andamento del valor medio dell'ampiezza dei segnali è mostrato [!!!!FIGURA]. Avendo posto 50mV di soglia al plastico, e tenendo conto che si è osservata l'efficacia del segnale di gate ridursi drasticamente sotto i 30° (per i quali si è ricostruita un'ampiezza media pari a circa 60mV), si ritiene la stima quantomeno plausibile.\\
+\\
+La varianza della distribuzione è stimata invece tenendo conto delle fluttuazioni sul segnale nel primo stadio di amplificazione, le quali fluttuazioni dominano nell'incertezza totale rappresentando tale situazione il \textit{collo di bottiglia} quantistico nel percorso del segnale.
+Il numero di elettroni in uscita dal primo dinodo è prodotto di due variabili casuali distribuite come delle Poisson, il numero di fotoelettroni e il guadagno del primo dinodo. Quest'ultima variabile ha in genere come valor medio 3, mentre la distribuzione dei fotoelettroni avrà un valor medio variabile in funzione dell'angolo. La varianza sulla distribuzione del prodotto è stata ottenuta attraverso una simulazione Montecarlo.
+\\
+Determinati media e varianza della distribuzione in funzione dell'angolo, è stato infine possibile stimare i coefficienti di scala per la correzione delle misure dei conteggi del gate e procedere al fit della Klein-Nishina.
+\begin{tabular}{|c|c|}
+\hline 
+$\theta\ (°)$ & $c(\theta)$ \\ 
+\hline 
+40 & 0.789 \\ 
+\hline 
+45 & 0.840 \\ 
+\hline 
+50 & 0.889 \\ 
+\hline 
+55 & 0.938 \\ 
+\hline 
+60 & 0.977 \\ 
+\hline 
+\end{tabular}
+
 \section{Risultati sperimentali}
 \subsection{Misura dei picchi} \label{subsec:picchi}
+Di seguito sono mostrati gli spettri raccolti a rispettivamente a 20°, 30° e 50° dall'asse del fascio. Lo spettro a 20° è stato acquisito in modalità no-gate.
 
+\subsection{Massa dell'elettrone}
+Si sono fittate le energie dei fotopicchi utilizzando la relazione Energia-Angolo \ref{eq:en_ang}.
+Nella prima immagine la massa dell'elettrone e il centro angolare del fascio sono parametri liberi del fit. 
+(IMMAGINE)
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+$m_e$ & $(423\pm 7) \mathrm{keV}$ \\ 
+\hline 
+$\theta_0$ & $(0.7\pm 0.4)°$ \\ 
+\hline 
+$\chi^2 / ndf$ & 6.2/11 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Avendo notato che i valori delle energie appaiono sistematicamente maggiori rispetto al valore teorico di circa 50 keV, si è effettuato un secondo fit imponendo il valore teorico della massa dell'elettrone e lasciando liberi il parametro di centro del fascio e un coefficiente addittivo sulle energie.
+
+[immagine]
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+$\theta_0$ & $(0.8\pm 0.4)$ \\ 
+\hline 
+$\Delta E$ & $(56\pm 5)\ \mathrm{keV}$ \\ 
+\hline 
+$\chi^2 / ndf$ & 6.8/11 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\'E dunque possibile che esista un effetto sistematico che riduca rigidamente le energie dei fotopicchi di 50-60 keV. Un ulteriore indizio in tale direzione, come si vedrà nella sezione seguente, proviene dal fit di una legge che mette in relazione angoli diffusione e \textit{differenze} tra le energie di due caratteristiche di uno spettro, piuttosto che la semplice energia di tali elementi.
+
+\subsection{Distanza Spalla Compton - Fotopicchi}
+La relazione \ref{eq:edge} tra angolo di scattering e differenza tra energie del fotopicco e della spalla Compton rientra nelle misure in grado di verificare l'esistenza di un $\Delta E$ rigido sulle misure di energia, come discusso nel paragrafo precedente.
+Di seguito è mostrato il fit delle misure di distanza corrette mediante il procedimento descritto in sezione \ref{subsec:edge}.\\
+Il fit ha come parametri liberi la massa dell'elettrone e il l'angolo corrispondente all'asse del fascio di fotoni in arrivo al plastico. 
+L'incertezza sui valori di energia riflette l'incertezza sull'identificazione del picco estremo del continuo Compton, a partire dal quale viene effettuata la correzione.
+
+[immagine]
+\\
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+$m_e$ & $(523\pm 10) \mathrm{keV}$ \\ 
+\hline 
+$\theta_0$ & $(-1.5\pm 3.6)°$ \\ 
+\hline 
+$\chi^2 /ndf$ & 11.2/13 \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Si mostra, per conto nella [figura], il fit delle misure di differenza non corrette a confronto con la relazione teorica, che mette in mostra la natura sistematica dell'errore commesso sulla misurazione della quantità $E'(\theta)-E_{CE}(\theta)$
+[immagine]
+\begin{tabular}{|c|c|}
+\hline 
+$m_e$ & $(730\pm 10) \mathrm{keV}$ \\ 
+\hline 
+$\theta_0$ & $(-3.6\pm 2.8)°$ \\ 
+\hline 
+$\chi^2 /ndf$ & 31.3/13 \\ 
+\hline 
+\end{tabular}
+
+\subsection{Fit della relazione di Klein-Nishina}
+\subsubsection{Coincidenze in funzione dell'angolo}
+In Fig. \ref{fig:KN_nocorr} è mostrato il grafico del conteggio delle coincidenze tra lo scintillatore plastico e quello inorganico in un tempo di misura di $15 \ m$ in funzione dell'angolo. Il fit è stato eseguito lasciando come parametri liberi della relazione un fattore moltiplicativo, il rapporto $E/m_e$ cercato e il centro angolare. \\
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{klein_nishina_nocorr_conf}
+\caption{La linea continua rossa mostra il risultato del fit dei punti sperimentali, la linea tratteggiata verde mostra la funzione corrispondente al rapporto teorico atteso e con restanti parametri uguali a quelli della funzione di fit.}
+\label{KN_nocorr}
+\end{center}
+\end{figure}
+
+I risultati sperimentali sono riassunti nella tabella sottostante: \\
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+• & \textbf{Valore} & \textbf{Incertezza} \\ 
+\hline 
+\textbf{Fattore molt.} & 19380 & 790 \\ 
+\hline 
+$\mathbf{E/m_e}$ & 0.388 & 0.069 \\ 
+\hline 
+$\mathbf{\theta_0\ (gradi)}$ & -0.50 & 0.38 \\ 
+\hline 
+$\mathbf{\chi^2/NDF}$ & 2.306 & • \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Il valore cercato $E/m_e$ risulta incompatibile con quello atteso di $2.45$. \\
+
+Applicate le correzioni descritte in sez. \ref{subsubsec:corr_soglia} il risultato è quello mostrato in Fig. \ref{fig:KN_corr}. \\
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{klein_nishina_corretta}
+\caption{Fit della relazione di Klein-Nishina con le correzioni dovute alla soglia dello scintillatore plastico. Sono stati utilizzati come parametri liberi del fit un fattore moltiplicativo, il rapporto $E/m_e$ e il centro angolare.}
+\label{fig:KN_corr}
+\end{center}
+\end{figure}
+
+I risultati sono elencati nella tabella sottostante: \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+• & \textbf{Valore} & \textbf{Incertezza} \\ 
+\hline 
+\textbf{Fattore molt.} & 39000 & 7700 \\ 
+\hline 
+$\mathbf{E/m_e}$ & 1.86 & 0.67 \\ 
+\hline 
+$\mathbf{\theta_0\ (gradi)}$ & -0.36 & 0.37 \\ 
+\hline 
+$\mathbf{\chi^2/NDF}$ & 1.466 & • \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Il valore di $E/m_e$ trovato risulta \textit{compatibile} con quello atteso entro una deviazione standard. \\
+Il $\chi^2$ trovato corrisponde ad una p-value di $0.2$, e la relazione risulta dunque compatibile con i dati sperimentali. \\
+
+\subsubsection{Integrazione dei fotopicchi}
+Come descritto in sez. \ref{subsec:fotopicchi}, sono stati misurati gli integrali dei fotopicchi a vari angoli. Ognuno di essi è stato diviso per la sezione d'urto fotoelettrica relativa all'energia teorica dei fotoni in arrivo a quell'angolo. Il risultato del fit della Klein-Nishina è riportato in Fig. \ref{fig:KN_fotopicchi}. L'errore sull'integrale è stato fissato al 10\%. Questo valore dovrebbe stimare l'errore commesso a causa del fondo in un modello semplicistico in cui lo si modellizza con una retta. !!CHECK!!!
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{integrali_fotopicco}
+\caption{Fit della relazione di Klein-Nishina utilizzando gli integrali dei fotopicchi}
+\label{fig:KN_fotopicchi}
+\caption{Fit della relazione di Klein-Nishina utilizzando l'integrale dei fotopicchi e la sezione d'urto fotoelettrica.}
+\end{center}
+\end{figure}
+
+I risultati sono riassunti nella seguente tabella: \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline 
+• & \textbf{Valore} & \textbf{Incertezza} \\ 
+\hline 
+\textbf{Fattore molt.} & 1.11 & 0.45 \\ 
+\hline 
+$\mathbf{E/m_e}$ & 3.3 & 2.1 \\ 
+\hline 
+$\mathbf{\chi^2/NDF}$ & 41.6 & • \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+Il risultato è \textit{compatibile} con quello atteso ma la curva non risulta adatta a descrivere l'andamento dei punti sperimentali. 
 
 
 \section{Conclusioni}

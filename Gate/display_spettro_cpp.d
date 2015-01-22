@@ -1,9 +1,8 @@
 
 # DO NOT DELETE
 
-./display_spettro_cpp.so: /home/federico/root/include/TH1F.h
-./display_spettro_cpp.so: /home/federico/root/include/TH1.h
-./display_spettro_cpp.so: /home/federico/root/include/TAxis.h
+./display_spettro_cpp.so: /home/federico/root/include/TGraphErrors.h
+./display_spettro_cpp.so: /home/federico/root/include/TGraph.h
 ./display_spettro_cpp.so: /home/federico/root/include/TNamed.h
 ./display_spettro_cpp.so: /home/federico/root/include/TObject.h
 ./display_spettro_cpp.so: /home/federico/root/include/Rtypes.h
@@ -21,17 +20,9 @@
 ./display_spettro_cpp.so: /home/federico/root/include/TBuffer.h
 ./display_spettro_cpp.so: /home/federico/root/include/TString.h
 ./display_spettro_cpp.so: /home/federico/root/include/TMathBase.h
-./display_spettro_cpp.so: /home/federico/root/include/TAttAxis.h
-./display_spettro_cpp.so: /home/federico/root/include/TArrayD.h
-./display_spettro_cpp.so: /home/federico/root/include/TArray.h
 ./display_spettro_cpp.so: /home/federico/root/include/TAttLine.h
 ./display_spettro_cpp.so: /home/federico/root/include/TAttFill.h
 ./display_spettro_cpp.so: /home/federico/root/include/TAttMarker.h
-./display_spettro_cpp.so: /home/federico/root/include/TArrayC.h
-./display_spettro_cpp.so: /home/federico/root/include/TArrayS.h
-./display_spettro_cpp.so: /home/federico/root/include/TArrayI.h
-./display_spettro_cpp.so: /home/federico/root/include/TArrayF.h
-./display_spettro_cpp.so: /home/federico/root/include/Foption.h
 ./display_spettro_cpp.so: /home/federico/root/include/TVectorFfwd.h
 ./display_spettro_cpp.so: /home/federico/root/include/TVectorDfwd.h
 ./display_spettro_cpp.so: /home/federico/root/include/TFitResultPtr.h
@@ -43,5 +34,22 @@
 ./display_spettro_cpp.so: /home/federico/root/include/TCollection.h
 ./display_spettro_cpp.so: /home/federico/root/include/TIterator.h
 ./display_spettro_cpp.so: /home/federico/root/include/Math/ParamFunctor.h
+./display_spettro_cpp.so: /home/federico/root/include/TCanvas.h
+./display_spettro_cpp.so: /home/federico/root/include/TPad.h
+./display_spettro_cpp.so: /home/federico/root/include/TVirtualPad.h
+./display_spettro_cpp.so: /home/federico/root/include/TAttPad.h
+./display_spettro_cpp.so: /home/federico/root/include/TVirtualX.h
+./display_spettro_cpp.so: /home/federico/root/include/TAttText.h
+./display_spettro_cpp.so: /home/federico/root/include/GuiTypes.h
+./display_spettro_cpp.so: /home/federico/root/include/Buttons.h
+./display_spettro_cpp.so: /home/federico/root/include/TQObject.h
+./display_spettro_cpp.so: /home/federico/root/include/TAttCanvas.h
+./display_spettro_cpp.so: /home/federico/root/include/TCanvasImp.h
+./display_spettro_cpp.so: /home/federico/root/include/TAxis.h
+./display_spettro_cpp.so: /home/federico/root/include/TAttAxis.h
+./display_spettro_cpp.so: /home/federico/root/include/TArrayD.h
+./display_spettro_cpp.so: /home/federico/root/include/TArray.h
+./display_spettro_cpp.so: /home/federico/root/include/TMath.h
+./display_spettro_cpp.so: /home/federico/root/include/TError.h
 ./display_spettro_cpp.so: /home/federico/root/include/cintdictversion.h /home/federico/root/include/RVersion.h
 display_spettro_cpp__ROOTBUILDVERSION= 5.34/08

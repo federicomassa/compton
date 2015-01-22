@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.29)  21 JAN 2015 02:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.11.29)  22 JAN 2015 03:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,10 +6,19 @@ entering extended mode
 (./compton.tex
 LaTeX2e <2014/05/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/extsizes/extarticle.cls
+Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/extsizes/size8.clo
+File: size8.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/exscale.sty
+Package: exscale 2014/09/29 v2.1h Standard LaTeX package exscale
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/cmex/m/n on input line 52.
+\big@size=\dimen102
 )
 \c@part=\count79
 \c@section=\count80
@@ -21,7 +30,7 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
-\bibindent=\dimen102
+\bibindent=\dimen103
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -55,8 +64,8 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
 ))
-\Gin@req@height=\dimen103
-\Gin@req@width=\dimen104
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -69,11 +78,11 @@ Package: amstext 2000/06/29 v2.01
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
-\ex@=\dimen105
+\ex@=\dimen106
 ))
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen106
+\pmbraise@=\dimen107
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
@@ -90,7 +99,7 @@ LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen107
+\big@size=\dimen108
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count93
@@ -103,12 +112,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count98
 \maxfields@=\count99
 \andhelp@=\toks17
-\eqnshift@=\dimen108
-\alignsep@=\dimen109
-\tagshift@=\dimen110
-\tagwidth@=\dimen111
-\totwidth@=\dimen112
-\lineht@=\dimen113
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
 \@envbody=\toks18
 \multlinegap=\skip44
 \multlinetaggap=\skip45
@@ -156,12 +165,12 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 \ttl@box=\box28
 \beforetitleunit=\skip46
 \aftertitleunit=\skip47
-\ttl@plus=\dimen114
-\ttl@minus=\dimen115
+\ttl@plus=\dimen115
+\ttl@minus=\dimen116
 \ttl@toksa=\toks25
-\titlewidth=\dimen116
-\titlewidthlast=\dimen117
-\titlewidthfirst=\dimen118
+\titlewidth=\dimen117
+\titlewidthlast=\dimen118
+\titlewidthfirst=\dimen119
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
@@ -179,8 +188,8 @@ Package: mathtools 2014/07/16 v1.15 mathematical typesetting tools
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count101
 \calc@Bcount=\count102
-\calc@Adimen=\dimen119
-\calc@Bdimen=\dimen120
+\calc@Adimen=\dimen120
+\calc@Bdimen=\dimen121
 \calc@Askip=\skip48
 \calc@Bskip=\skip49
 LaTeX Info: Redefining \setlength on input line 75.
@@ -194,14 +203,14 @@ Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count104
-\l_MT_multwidth_dim=\dimen121
+\l_MT_multwidth_dim=\dimen122
 \origjot=\skip51
-\l_MT_shortvdotswithinadjustabove_dim=\dimen122
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen123
-\l_MT_above_intertext_sep=\dimen124
-\l_MT_below_intertext_sep=\dimen125
-\l_MT_above_shortintertext_sep=\dimen126
-\l_MT_below_shortintertext_sep=\dimen127
+\l_MT_shortvdotswithinadjustabove_dim=\dimen123
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen124
+\l_MT_above_intertext_sep=\dimen125
+\l_MT_below_intertext_sep=\dimen126
+\l_MT_above_shortintertext_sep=\dimen127
+\l_MT_below_shortintertext_sep=\dimen128
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/ms/ragged2e.sty
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
@@ -216,7 +225,7 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks26
-\footnotemargin=\dimen128
+\footnotemargin=\dimen129
 \c@pp@next@reset=\count105
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
@@ -259,14 +268,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count106
 \Gm@cntv=\count107
 \c@Gm@tempcnt=\count108
-\Gm@bindingoffset=\dimen129
-\Gm@wd@mp=\dimen130
-\Gm@odd@mp=\dimen131
-\Gm@even@mp=\dimen132
-\Gm@layoutwidth=\dimen133
-\Gm@layoutheight=\dimen134
-\Gm@layouthoffset=\dimen135
-\Gm@layoutvoffset=\dimen136
+\Gm@bindingoffset=\dimen130
+\Gm@wd@mp=\dimen131
+\Gm@odd@mp=\dimen132
+\Gm@even@mp=\dimen133
+\Gm@layoutwidth=\dimen134
+\Gm@layoutheight=\dimen135
+\Gm@layouthoffset=\dimen136
+\Gm@layoutvoffset=\dimen137
 \Gm@dimlist=\toks27
 )
 \@indexfile=\write3
@@ -274,10 +283,6 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 
 Writing index file compton.idx
-
-LaTeX Warning: Unused global option(s):
-    [5pt].
-
 (./compton.aux)
 \openout1 = `compton.aux'.
 
@@ -297,13 +302,13 @@ LaTeX Font Info:    ... okay on input line 19.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
-\scratchdimen=\dimen137
+\scratchdimen=\dimen138
 \scratchbox=\box29
 \nofMPsegments=\count110
 \nofMParguments=\count111
 \everyMPshowfont=\toks28
 \MPscratchCnt=\count112
-\MPscratchDim=\dimen138
+\MPscratchDim=\dimen139
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
 \everyMPtoPDFconversion=\toks29
@@ -378,12 +383,12 @@ LaTeX Info: Redefining \selectfont on input line 19.
 * \topmargin=-13.87262pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=9.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=74.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=7.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -415,7 +420,9 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 48.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 48.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 48.
 
 <feynman.png, id=11, 465.74pt x 292.09125pt>
@@ -434,38 +441,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
-[2 <./feynman.png>] [3 <./cross_sections.png>]
-<Apparato2.png, id=25, 803.0pt x 602.25pt>
+<Apparato2.png, id=14, 803.0pt x 602.25pt>
 File: Apparato2.png Graphic file (type png)
  <use Apparato2.png>
 Package pdftex.def Info: Apparato2.png used on input line 86.
 (pdftex.def)             Requested size: 401.49902pt x 301.12425pt.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 87.
-
-Overfull \hbox (6.79584pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/n/14.4 ($1925 \OML/cmm/m/it/14.4 d$\OT1/cmr/m/n/14.4 ), ^^Re stata r
-i-ca-vata l' at-tivit^^Ra al mo-mento dell' in-izio dell'esperimento
- []
-
-
-Overfull \hbox (2.05426pt too wide) in paragraph at lines 95--98
-\OT1/cmr/m/n/14.4 l'attivit^^Ra si stima es-sere dimi-nuita di circa 1.5%, ma l
-e mis-ure che richiede-
- []
-
-[4] [5 <./Apparato2.png>]
-Overfull \hbox (40.51543pt too wide) in paragraph at lines 104--109
-\OT1/cmr/m/n/14.4 dom-i-nante in questo in-ter-vallo di en-ergie l'effetto Comp
--ton, quando l'interazione
- []
-
-
+ [2 <./feynman.png>] [3 <./cross_sections.png>] [4 <./Apparato2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 112--116
 
  []
 
-[6]
+
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
@@ -475,29 +463,30 @@ LaTeX Font Info:    Try loading font information for OMS+cmr on input line 124.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
- [7]
+
+Overfull \hbox (2.33968pt too wide) in paragraph at lines 125--127
+[]\OT1/cmr/m/n/10.95 Digitalizzazione del seg-nale prove-niente dallo scin-til-
+la-tore plas-tico. Questa avviene quando
+ []
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-<dual_1.png, id=44, 1706.375pt x 702.625pt>
+<dual_1.png, id=39, 1706.375pt x 702.625pt>
 File: dual_1.png Graphic file (type png)
  <use dual_1.png>
 Package pdftex.def Info: dual_1.png used on input line 138.
 (pdftex.def)             Requested size: 426.59271pt x 175.6558pt.
- [8 <./dual_1.png (PNG copy)>]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 151.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 151.
- [9]
+ [6 <./dual_1.png (PNG copy)>]
 Underfull \hbox (badness 10000) in paragraph at lines 166--172
 
  []
 
-[10]
+[7]
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 184.
 
@@ -508,31 +497,14 @@ LaTeX Warning: Command \textdegree invalid in math mode on input line 188.
 LaTeX Warning: Command \textdegree invalid in math mode on input line 193.
 
 
-Overfull \hbox (0.28925pt too wide) in paragraph at lines 197--198
-\OT1/cmr/m/n/14.4 La misura della po-sizione an-go-lare dello scin-til-la-tore 
-in-or-gan-ico ^^Re soggetta
- []
-
-
 LaTeX Warning: Command \textdegree invalid in math mode on input line 200.
-
-
-Overfull \hbox (13.88239pt too wide) in paragraph at lines 200--201
-\OT1/cmr/m/n/14.4 dalla lim-i-tata ca-pacit^^Ra da parte dell'occhio umano di v
-a-l-utare l'allineamento
- []
-
-[11]
-Overfull \hbox (11.59901pt too wide) in paragraph at lines 212--213
-[]\OT1/cmr/m/n/14.4 Considerando l'energia me-dia della sor-gente uti-liz-zata 
-(Cobalto, $\OML/cmm/m/it/14.4 E=m[] \OT1/cmr/m/n/14.4 =
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
+[8]
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 236.
 
@@ -541,7 +513,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
@@ -559,144 +531,263 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 252.
 
-[13]
+<errore_angolo.png, id=53, 1142.2675pt x 718.685pt>
+File: errore_angolo.png Graphic file (type png)
+ <use errore_angolo.png>
+Package pdftex.def Info: errore_angolo.png used on input line 261.
+(pdftex.def)             Requested size: 571.13235pt x 359.34161pt.
+
+Overfull \hbox (127.55388pt too wide) in paragraph at lines 261--262
+ [] 
+ []
+
 
 LaTeX Warning: Command \textdegree invalid in math mode on input line 267.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 281--283
+[9] [10 <./errore_angolo.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-<"calibrazione2".png, id=70, 1142.2675pt x 718.685pt>
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 271.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 281.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
+
+ []
+
+<"calibrazione2".png, id=63, 1142.2675pt x 718.685pt>
 File: "calibrazione2".png Graphic file (type png)
 
 <use "calibrazione2".png>
-Package pdftex.def Info: "calibrazione2".png used on input line 297.
+Package pdftex.def Info: "calibrazione2".png used on input line 311.
 (pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
- [15] <"err_en4".png, id=74, 1142.2675pt x 718.685pt>
-File: "err_en4".png Graphic file (type png)
 
-<use "err_en4".png>
-Package pdftex.def Info: "err_en4".png used on input line 303.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<"err_en4".png, id=64, 1142.2675pt x 718.685pt>
+File: "err_en4".png Graphic file (type png)
+ <use "err_en4".png>
+Package pdftex.def Info: "err_en4".png used on input line 317.
 (pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (2.76048pt too wide) in paragraph at lines 310--310
- |[]\OT1/cmr/bx/n/14.4 Determinazione di $\OML/cmm/m/it/14.4 m[]$ \OT1/cmr/bx/n
-/14.4 dal fit della re-lazione Energia-Angolo| 
+Overfull \hbox (1.35704pt too wide) in paragraph at lines 327--330
+\OT1/cmr/m/n/10.95 Il seg-nale in in-gresso al gate deve es-sere con-forme per 
+du-rata al seg-nale di in-put all'analizzatore,
  []
 
+[12]
 
-Overfull \hbox (12.4985pt too wide) in paragraph at lines 313--316
-\OT1/cmr/m/n/14.4 in queste???] si sfrutta la modalit^^Ra di ac-qui-sizione con
- gate dell'analizzatore
- []
+LaTeX Warning: Command \textdegree invalid in math mode on input line 341.
 
-[16 <./calibrazione2.png>]
-Overfull \hbox (0.48254pt too wide) in paragraph at lines 317--318
-[]\OT1/cmr/m/n/14.4 !!!CORREGGERE PERCHE GIA MESSO NELL AP-PA-RATO SPER-
- []
+[13 <./calibrazione2.png>]
 
-[17 <./err_en4.png>]
-
-LaTeX Warning: Command \textdegree invalid in math mode on input line 327.
-
-
-LaTeX Warning: Reference `subsec:spalla' on page 18 undefined on input line 333
+LaTeX Warning: Reference `subsec:spalla' on page 14 undefined on input line 347
 .
 
 
-LaTeX Warning: Reference `fig:spettro_gate' on page 18 undefined on input line 
-333.
+LaTeX Warning: Reference `fig:spettro_gate' on page 14 undefined on input line 
+347.
 
-[18] [19]
+[14 <./err_en4.png>]
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 339.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 353.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
-<"distanza_picchi".png, id=90, 1142.2675pt x 718.685pt>
+<"distanza_picchi".png, id=76, 1142.2675pt x 718.685pt>
 File: "distanza_picchi".png Graphic file (type png)
 
 <use "distanza_picchi".png>
-Package pdftex.def Info: "distanza_picchi".png used on input line 354.
+Package pdftex.def Info: "distanza_picchi".png used on input line 368.
 (pdftex.def)             Requested size: 443.57848pt x 279.0907pt.
 
 
-LaTeX Warning: Citation `subsec:picchi' on page 20 undefined on input line 359.
+LaTeX Warning: Citation `subsec:picchi' on page 15 undefined on input line 373.
 
 
-[20] [21 <./distanza_picchi.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+[15] [16 <./distanza_picchi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
 
  []
 
 
-LaTeX Warning: Command \textdegree invalid in math mode on input line 374.
+LaTeX Warning: Command \textdegree invalid in math mode on input line 388.
 
-[22] [23] (./bibcompton.bib
+[17]
+
+LaTeX Warning: Reference `Subsec:gate' on page 18 undefined on input line 405.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+
+ []
+
+[18] (/usr/local/texlive/2014/texmf-dist/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 472.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--485
+
+ []
+
+[19]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 499.
+
+[20]
+
+LaTeX Warning: Reference `eq:edge' on page 21 undefined on input line 525.
+
+
+LaTeX Warning: Reference `subsec:edge' on page 21 undefined on input line 526.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
+
+ []
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 537.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 550.
+
+
+LaTeX Warning: Reference `fig:KN_nocorr' on page 21 undefined on input line 558
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
+
+ []
+
+<klein_nishina_nocorr_conf.png, id=98, 698.61pt x 475.7775pt>
+File: klein_nishina_nocorr_conf.png Graphic file (type png)
+
+<use klein_nishina_nocorr_conf.png>
+Package pdftex.def Info: klein_nishina_nocorr_conf.png used on input line 562.
+(pdftex.def)             Requested size: 349.30414pt x 237.88815pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 587--588
+
+ []
+
+<klein_nishina_corretta.png, id=99, 698.61pt x 475.7775pt>
+File: klein_nishina_corretta.png Graphic file (type png)
+
+<use klein_nishina_corretta.png>
+Package pdftex.def Info: klein_nishina_corretta.png used on input line 591.
+(pdftex.def)             Requested size: 349.30414pt x 237.88815pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 615--617
+
+ []
+
+[22 <./klein_nishina_nocorr_conf.png>] (./bibcompton.bib
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+[]\OT1/cmr/m/n/10.95 Bailey, Paul, \OT1/cmr/m/it/10.95 Mea-sure-ment of the Com
+p-ton To-tal Cross Sec-tion\OT1/cmr/m/n/10.95 ,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
-[]\OT1/cmr/m/n/14.4 J. E. Parks, The Comp-ton Effect--
+[]\OT1/cmr/m/n/10.95 J. E. Parks, The Comp-ton Effect--Compton Scat-ter-ing and
+ Gamma Ray,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-\OT1/cmr/m/n/14.4 Compton Scat-ter-ing and Gamma Ray,
+Underfull \hbox (badness 6526) in paragraph at lines 6--7
+[]\OT1/cmr/m/n/10.95 Particle Data Book, http://pdg.lbl.gov/2013/reviews/rpp201
+3-rev-passage-particles-
  []
 
-
-Overfull \hbox (102.34305pt too wide) in paragraph at lines 4--5
-\OT1/cmr/m/n/14.4 http://www.phys.utk.edu/labs/modphys/Compton%20Scattering%20E
-xperiment.pdf 
- []
-
-) [24] (./compton.aux)
+) [23 <./klein_nishina_corretta.png>] (./compton.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4855 strings out of 493109
- 68606 string characters out of 6135009
- 143204 words of memory out of 5000000
- 8182 multiletter control sequences out of 15000+600000
- 19879 words of font info for 77 fonts, out of 8000000 for 9000
+ 5140 strings out of 493109
+ 73981 string characters out of 6135009
+ 146410 words of memory out of 5000000
+ 8463 multiletter control sequences out of 15000+600000
+ 16377 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,8n,30p,896b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/
-local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on compton.pdf (24 pages, 1456977 bytes).
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on compton.pdf (23 pages, 1527044 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 170 PDF objects out of 1000 (max. 8388607)
+ 110 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -21,7 +21,10 @@ void fit_spalla() {
    //   double spalle[15] = {275,350,370,410,450,510,530,630,650,550,480,425,380,325,300};
 double spalle[15] = {275,350,370,410,450,525,550,650,650,550,480,425,380,325,300};  
    double diff[15];
+   double diff_nocorr[15];
+   for (int i = 0; i < 15; i++) diff_nocorr[i] = picchi[i] - spalle[i];
    double errdiff[15] = {28,28,28,28,28,20,20,28,28,20,28,20,20,20,20};
+   for (int i = 0; i < 15; i++) errdiff[i] = errdiff[i]/2;
 
  for (int i = 0; i < 15; i++) {
    picchi_corretti[i] = picchi[i] + corr_picchi[i];}
@@ -31,7 +34,7 @@ double spalle[15] = {275,350,370,410,450,525,550,650,650,550,480,425,380,325,300
 
 
   double errpicchi[15] = {12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5,12.5};
-  TGraphErrors* graph = new TGraphErrors(15,angolo,diff,errangolo,errdiff);
+  TGraphErrors* graph = new TGraphErrors(15,angolo,diff_nocorr,errangolo,errdiff);
   TF1* fitfunc = new TF1("Fitting Function","1252.85/(1+1252.82/[0]*(1-cos((x-[1])*4*atan(1)/180)))/(1+2/[0]*1252.85/(1+1252.82/[0]*(1-cos((x-[1])*4*atan(1)/180))))",-65,65);
 
   fitfunc->SetParName(0,"Mass");
@@ -39,11 +42,13 @@ double spalle[15] = {275,350,370,410,450,525,550,650,650,550,480,425,380,325,300
   fitfunc->SetParameters(500,1.5);
   
   graph->Fit(fitfunc,"0RS");
+  cout << "NDF fit diff-angolo: " << fitfunc->GetNDF();
   //  Grafico Fit differenze-angolo
   graph->SetTitle("Distanza spalla-fotopicchi;Angolo (gradi); Distanza spalla-fotopicchi (keV)");
   graph->DrawClone("APE");
   fitfunc->DrawClone("SAME");
-  fitfunc->SetParameters(511,-3.5);
+  fitfunc->SetParameters(511,-1.5);
+  fitfunc->SetLineStyle(7);
   fitfunc->SetLineColor(kGreen);
   fitfunc->DrawClone("SAME");
 

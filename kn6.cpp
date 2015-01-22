@@ -26,19 +26,21 @@ double Klein_Nishina(double *vars, double *pars) {
 void KN6() {
   //   const int npoints = 6;
      const int npoints = 8;
-     double angolo_f[npoints] = {60,55,50,45,-40,-45,-55,-60};
+     double angolo_f[npoints] = {60,55,50,45,-40,-45,-55,-60}; //per COEFF MARCO
      //       double angolo_f[npoints] = {50,45,-40,-45,-55,-60};
-       //  double angolo_f[npoints] = {50,45,-45,-55,-60};
+     //  double angolo_f[npoints] = {50,45,-45,-55,-60};
      double angolo[npoints];
      
      TCanvas *c1 = new TCanvas(); 
      c1->SetGrid();
-     
      double E = (1.17+1.33)/2.;
-     
      for (int i = 0; i < npoints; i++) {
          angolo[i] = angolo_f[i]-1.38;}
-     double energia[npoints] = {16766/0.9556/0.3858,18570/0.958/0.3475,21813/0.96/0.3122,23901/0.9464/0.2804,25323/0.8533/0.2519,23891/0.9464/0.2804,19632/0.958/0.3475,18121/0.9558/0.3858};
+     //     double energia[npoints] = {16766/0.9556/0.3858,18570/0.958/0.3475,21813/0.96/0.3122,23901/0.9464/0.2804,25323/0.8533/0.2519,23891/0.9464/0.2804,19632/0.958/0.3475,18121/0.9558/0.3858};  //coeff ninci
+
+       double energia[npoints] = {16766/0.97753,18570/0.938191,21813/0.887459,23901/0.840101,25323/0.789956,23891/0.840101,19632/0.938191,18121/0.97753}; //COEFF MARCO
+     // double energia[npoints] = {16766,18570,21813,23901,25323,23891,19632,18121};
+
      //  double energia[npoints] = {21813,23901,25323,23891,19632,18121};
      // double energia[npoints] = {21813/0.96/0.3122,23901/0.9464/0.2804,25323/0.8533/0.2519, 23891/0.9464/0.2804,19632/0.958/0.3475,18121/0.9558/0.3858};
      //     double energia[npoints] = {21813,23901,25323,23891,19632,18121};
@@ -46,20 +48,24 @@ void KN6() {
      
      for (int i = 0; i < npoints; i++) {
        thenergia[i] = Ef(2.4518,angolo[i]);}
-         double integral[npoints] = {297536*pow(thenergia[0],2.23)/0.49,301288*pow(thenergia[1],2.23)/0.532,368041*pow(thenergia[2],2.23)/0.512,185865*pow(thenergia[3],2.23)/0.48,111006*pow(thenergia[4],2.23)/0.47};
+         double integral[npoints] = {297536*pow(thenergia[0],1.93)/0.889,301288*pow(thenergia[1],1.93)/0.840,368041*pow(thenergia[2],1.93)/0.840,185865*pow(thenergia[3],1.93)/0.938,111006*pow(thenergia[4],1.93)/0.977};
+	 for (int i = 0; i < npoints; i++) {
+	   integral[i] = integral[i]/1E11;
+	 }
      //    double integral[npoints] = {23.8*pow(thenergia[0],3),26.12*pow(thenergia[1],3),25.26*pow(thenergia[2],3),17.39*pow(thenergia[3],3),12.80*pow(thenergia[4],3)};
      double errenergia[npoints], errangolo[npoints];
 for (int i = 0; i < npoints; i++) { 
-    errenergia[i] = sqrt(energia[i]);
-    errangolo[i] = 2;
+  errenergia[i] = sqrt(energia[i]);
+  // errenergia[i] = integral[i]/10; //Per integrale
+    errangolo[i] = 1;
 }   
 // [2]+[0]/((1+1250*cos(x*(4*atan(1)/180.))/[1])*(1+1250*cos(x*(4*atan(1)/180.))/[1]))    *   (1/(1+1250*cos(x*(4*atan(1)/180.))/[1])+(1+1250*cos(x*(4*atan(1)/180.))/[1])-1+cos(x*(4*atan(1)/180.))*cos(x*(4*atan(1)/180.))
     //1252.85
 //    TF1* fitfunc = new TF1("Fitting Function", "[0]/((1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])*(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1]))*(1/(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])+(1+1250*(1-cos((x-[2])*(4*atan(1)/180.)))/[1])-1+cos((x-[2])*(4*atan(1)/180.))*cos((x-[2])*(4*atan(1)/180.)))",-90,90);
  TF1 *fitfunc = new TF1("Fitting Function", Klein_Nishina, -90,90,3);
 
-     fitfunc->SetParameters(135000,2,-2);
-     //     fitfunc->FixParameter(1,500);
+     fitfunc->SetParameters(30000,2,-0.2);
+     //             fitfunc->FixParameter(2,0);
      TGraphErrors *graph = new TGraphErrors(npoints,angolo_f,energia,errangolo,errenergia);
      graph->SetTitle("Klein Nishina");
      graph->GetXaxis()->SetTitle("Angolo(°)");
@@ -73,9 +79,10 @@ for (int i = 0; i < npoints; i++) {
      fitfunc->DrawClone("SAME");
      
 
-      fitfunc->SetParameters(4E4,2,-2);
+      fitfunc->SetParameters(39380.9,2.45,-0.36);
+      fitfunc->SetLineStyle(7);
       fitfunc->SetLineColor(kRed);
-      fitfunc->DrawClone("SAME");
+         fitfunc->DrawClone("SAME");
     // TPaveText* pt = new TPaveText(.05,.1,.95.,.8);
 //     pt->AddText("Chi quadro ridotto: ");
 //     pt->AddText("fitfunc->GetChisquare()/fitfunc->GetNDF()");
